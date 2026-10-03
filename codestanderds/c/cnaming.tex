@@ -1,0 +1,77 @@
+\subsubsection{General Naming Requirements}
+
+Names shall describe the purpose, behavior, or ownership of the object they identify. Abbreviations shall be avoided unless they are widely understood within the project.
+
+Names shall:
+
+\begin{itemize}
+	\item use lowercase \texttt{snake\_case} for functions and variables;
+	\item use uppercase \texttt{UPPER\_SNAKE\_CASE} for macros;
+	\item use descriptive names for types;
+	\item distinguish counts, sizes, indexes, capacities, and offsets;
+	\item avoid names that differ only by capitalization;
+	\item avoid names that shadow variables in an enclosing scope;
+	\item avoid single-letter names except for short loop indexes;
+	\item avoid misleading names.
+\end{itemize}
+
+\subsubsection{Functions}
+
+Functions shall use verb-based names that describe their operation.
+
+\begin{lstlisting}[language=C]
+buffer_init();
+buffer_write();
+buffer_clear();
+packet_is_valid();
+\end{lstlisting}
+
+Boolean-returning functions should use names such as:
+
+\begin{lstlisting}[language=C]
+is_valid();
+has_error();
+can_write();
+\end{lstlisting}
+
+\subsubsection{Variables}
+
+Variables shall describe their content and, where useful, their unit.
+
+\begin{lstlisting}[language=C]
+size_t packet_length;
+uint32_t timeout_ms;
+uint8_t retry_count;
+bool connection_is_open;
+\end{lstlisting}
+
+Names such as \texttt{data}, \texttt{value}, \texttt{temp}, and \texttt{result} should be avoided unless their meaning is clear from the local context.
+
+\subsubsection{Types}
+
+Project-defined types shall use a consistent project convention.
+
+\begin{lstlisting}[language=C]
+typedef struct buffer buffer_t;
+typedef enum device_state device_state_t;
+\end{lstlisting}
+
+Structure tags and typedef names shall not unnecessarily duplicate one another.
+
+\subsubsection{Constants and Macros}
+
+Constants should preferably be represented using typed constants, enumerations, or \texttt{static const} objects instead of macros.
+
+\begin{lstlisting}[language=C]
+static const size_t max_packet_length = 1024U;
+\end{lstlisting}
+
+Macros shall use uppercase names with a project-specific prefix.
+
+\begin{lstlisting}[language=C]
+#define PROJECT_MAX_PACKET_LENGTH 1024U
+\end{lstlisting}
+
+\subsubsection{Private Names}
+
+Private file-scope functions and variables shall use \texttt{static}. A project prefix may be used for private names when required to avoid collisions with external symbols.

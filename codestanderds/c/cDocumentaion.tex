@@ -1,0 +1,86 @@
+\subsubsection{Documentation Requirements}
+
+Documentation shall explain intent, contracts, assumptions, ownership, and limitations. It shall not merely repeat the implementation.
+
+Documentation shall be updated whenever behavior or interfaces change.
+
+\subsubsection{Public Interfaces}
+
+Every public function shall document:
+
+\begin{itemize}
+	\item its purpose;
+	\item each parameter;
+	\item the return value;
+	\item possible error conditions;
+	\item ownership and lifetime rules;
+	\item thread-safety requirements;
+	\item whether pointers may be \texttt{NULL}.
+\end{itemize}
+
+\begin{lstlisting}[language=C]
+/**
+ * @brief Writes bytes to a buffer.
+ *
+ * @param buffer Buffer that receives the data.
+ * @param data Input data. The memory is borrowed and is not retained.
+ * @param length Number of bytes to write.
+ *
+ * @return 0 on success.
+ * @return -1 if an argument is invalid.
+ * @return -2 if insufficient capacity is available.
+ *
+ * @threadsafe No. The caller shall provide synchronization.
+ */
+int buffer_write(buffer_t *buffer,
+                 const uint8_t *data,
+                 size_t length);
+\end{lstlisting}
+
+\subsubsection{Module Documentation}
+
+Each module shall document:
+
+\begin{itemize}
+	\item its responsibility;
+	\item its public interface;
+	\item its dependencies;
+	\item its ownership model;
+	\item its initialization requirements;
+	\item its thread-safety model;
+	\item its error-reporting strategy.
+\end{itemize}
+
+\subsubsection{Comments}
+
+Comments shall explain why the code exists, not simply describe what the code visibly does.
+
+Poor comment:
+
+\begin{lstlisting}[language=C]
+// Increment index
+index++;
+\end{lstlisting}
+
+Useful comment:
+
+\begin{lstlisting}[language=C]
+// The hardware requires a delay after reset before the status register becomes valid.
+delay_ms(HARDWARE_RESET_DELAY_MS);
+\end{lstlisting}
+
+For multi-line comments use space+asterisk for every line
+
+\subsubsection{TODO Comments}
+
+TODO comments shall include an issue identifier or owner.
+
+\begin{lstlisting}[language=C]
+// TODO(PROJ-142): Replace polling with event notification.
+\end{lstlisting}
+
+Unowned TODO comments shall not be committed to production code.
+
+\subsubsection{Generated Documentation}
+
+Public interfaces should use a consistent documentation format, such as Doxygen. Generated documentation shall be treated as a build artifact and shall not replace source-level documentation.

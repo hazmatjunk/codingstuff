@@ -1,0 +1,68 @@
+\subsubsection{Indentation}
+
+Tabs shall be used for indentation. Spaces shall not be used to represent indentation.
+
+One tab shall represent one logical indentation level. The display width of a tab shall be four spaces in the project editor configuration.
+
+\subsubsection{Alignment}
+
+Spaces may be used for alignment within a line, but alignment shall not create a requirement for additional whitespace on later lines.
+
+\subsubsection{Braces}
+
+Braces shall always be used for compound statements, including statements containing only one instruction.
+
+Opening braces shall appear on the same line as the associated statement.
+
+\begin{lstlisting}[language=C]
+if (condition) {
+	process_item();
+} else {
+	handle_error();
+}
+\end{lstlisting}
+
+\subsubsection{Whitespace}
+
+There shall be spaces:
+
+\begin{itemize}
+	\item around binary operators;
+	\item after commas;
+	\item between a type and a variable name where appropriate.
+\end{itemize}
+
+After every keyword (if, while, etc) of the C language, a space must be added. e.g.
+\begin{lstlisting}[language=C]
+if (i == 1)
+while (i == 0)
+\end{lstlisting}
+keywords include:
+\begin{itemize}
+	\item if
+	\item switch
+	\item case
+	\item for
+	\item do
+	\item while
+\end{itemize}
+but not:
+\begin{itemize}
+	\item sizeof
+	\item typeof
+	\item alignof
+	\item attribute
+\end{itemize}
+
+There shall be no trailing whitespace.
+
+\subsubsection{Line Length}
+
+Lines should not exceed 100 characters. A longer line is permitted only when breaking it would reduce readability.
+
+\subsubsection{Automated Formatting}
+
+All C files shall be processed using the project-approved formatter configuration. Manual formatting preferences shall not override the project formatter.
+
+Package indent under Debian and Ubuntu Linux distributions is recommended for formatting C code.
+On windows it can be found here: https://gnuwin32.sourceforge.net/packages/indent.htm

@@ -1,0 +1,13 @@
+\subsubsection{Type Hints}
+
+Public functions and methods shall include type hints for parameters and
+return values.
+
+\begin{lstlisting}[language=Python]
+def load_configuration(path: str) -> dict[str, str]:
+    """Load configuration values from a file."""
+    ...
+\end{lstlisting}
+
+Static type checking should be performed using \texttt{mypy} or the
+project-approved equivalent.

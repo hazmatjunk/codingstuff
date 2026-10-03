@@ -1,0 +1,68 @@
+\subsubsection{Purpose}
+
+Exceptions provide a controlled method for deviating from this standard. They shall not be used to avoid normal engineering review.
+
+\subsubsection{When an Exception Is Required}
+
+An exception is required when code:
+
+\begin{itemize}
+	\item uses a prohibited language feature;
+	\item introduces an unapproved external dependency;
+	\item exposes a normally private symbol;
+	\item uses dynamic allocation in a restricted module;
+	\item suppresses a compiler or static-analysis warning;
+	\item violates a mandatory formatting or naming rule;
+	\item requires implementation-defined or compiler-specific behavior;
+	\item cannot satisfy a memory, type, or concurrency rule.
+\end{itemize}
+
+\subsubsection{Exception Record}
+
+Each exception shall document:
+
+\begin{itemize}
+	\item the rule identifier;
+	\item the affected file, module, or function;
+	\item the reason for the deviation;
+	\item the risks introduced;
+	\item the mitigation or compensating control;
+	\item the approving reviewer;
+	\item the date of approval;
+	\item the planned review or expiration date.
+\end{itemize}
+
+\begin{longtable}{p{0.22\textwidth} p{0.68\textwidth}}
+\toprule
+Field & Value \\
+\midrule
+Rule identifier & C-MEM-004 \\
+Affected module & \texttt{network\_buffer.c} \\
+Deviation & Dynamic allocation is used after initialization. \\
+Reason & Incoming packet size is not known during startup. \\
+Mitigation & Maximum allocation is bounded and failure is handled. \\
+Approver & Technical lead \\
+Review date & 2026-10-03 \\
+Status & Approved \\
+\bottomrule
+\end{longtable}
+
+\subsubsection{Warning Suppression}
+
+Warning suppression shall be localized to the smallest possible scope.
+
+A suppression shall include a comment explaining:
+
+\begin{itemize}
+	\item which warning is suppressed;
+	\item why it is safe;
+	\item why the code cannot be rewritten to avoid it.
+\end{itemize}
+
+Suppressing warnings globally is prohibited.
+
+\subsubsection{Review}
+
+Exceptions shall be reviewed when the affected module changes and at each major release.
+
+Expired or no-longer-needed exceptions shall be removed.

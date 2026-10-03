@@ -1,0 +1,54 @@
+\subsubsection{Compiler}
+
+The compiler shall be configured for C11:
+
+\begin{lstlisting}[language=bash]
+-std=c11
+\end{lstlisting}
+
+The following warning categories should be enabled for GCC or Clang:
+
+\begin{lstlisting}[language=bash]
+-Wall
+-Wextra
+-Wpedantic
+-Wconversion
+-Wsign-conversion
+-Wshadow
+-Wcast-qual
+-Wcast-align
+-Wstrict-prototypes
+-Wmissing-prototypes
+-Wformat=2
+-Wundef
+-Werror
+\end{lstlisting}
+
+The exact warning set may vary by compiler, but all warnings shall be resolved or formally justified.
+
+\subsubsection{Analysis}
+
+The project shall use:
+
+\begin{itemize}
+	\item compiler warnings;
+	\item a static analyzer;
+	\item AddressSanitizer during testing;
+	\item UndefinedBehaviorSanitizer during testing;
+	\item a formatter;
+	\item unit tests;
+	\item boundary and negative tests.
+\end{itemize}
+
+\subsubsection{Required Build Checks}
+
+A merge shall be rejected if:
+
+\begin{itemize}
+	\item formatting fails;
+	\item compilation produces warnings;
+	\item static analysis produces unreviewed findings;
+	\item sanitizers detect an error;
+	\item unit tests fail;
+	\item coverage or safety requirements are not met.
+\end{itemize}

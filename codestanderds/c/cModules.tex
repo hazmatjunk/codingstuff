@@ -1,0 +1,44 @@
+\subsubsection{Module Structure}
+
+Each module shall consist of:
+
+\begin{itemize}
+	\item one public header file, when an external interface is required;
+	\item one source file;
+	\item private declarations contained in the source file;
+	\item unit tests for externally visible behavior.
+\end{itemize}
+
+A module shall have one primary responsibility.
+
+\subsubsection{Header Independence}
+
+Every public header shall compile independently when included into an otherwise empty translation unit.
+
+\begin{lstlisting}[language=C]
+#include "buffer.h"
+
+int main(void)
+{
+	return 0;
+}
+\end{lstlisting}
+
+\subsubsection{Include Ownership}
+
+A source file shall include the header that declares its public interface before other project headers.
+
+\begin{lstlisting}[language=C]
+#include "buffer.h"
+
+#include <stddef.h>
+#include <stdint.h>
+
+#include "memory.h"
+\end{lstlisting}
+
+\subsubsection{Circular Dependencies}
+
+Circular dependencies between modules are prohibited.
+
+Modules shall depend on abstractions or narrow interfaces rather than including unrelated internal headers.

@@ -1,0 +1,17 @@
+\subsubsection{Formatting Rules}
+
+Python code shall follow PEP 8 and the project formatter configuration.
+
+\begin{itemize}
+    \item Four spaces shall be used for indentation.
+    \item Tabs shall not be used.
+    \item Lines should not exceed 88 characters.
+    \item Black shall be used for automatic formatting.
+    \item Ruff shall be used for linting.
+\end{itemize}
+
+\begin{lstlisting}[language=Python]
+def calculate_checksum(data: bytes) -> int:
+    """Return the checksum for a byte sequence."""
+    return sum(data) % 256
+\end{lstlisting}

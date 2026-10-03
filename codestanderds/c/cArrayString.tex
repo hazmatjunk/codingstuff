@@ -1,0 +1,27 @@
+\subsubsection{Array Bounds}
+
+Every array access shall be demonstrably within bounds.
+
+A pointer to an array shall be accompanied by its length unless the length is guaranteed by the interface contract.
+
+\begin{lstlisting}[language=C]
+int process_bytes(const uint8_t *data, size_t length);
+\end{lstlisting}
+
+\subsubsection{String Handling}
+
+The following functions are prohibited:
+
+\begin{itemize}
+	\item \texttt{gets};
+	\item \texttt{strcpy};
+	\item \texttt{strcat};
+	\item \texttt{sprintf};
+	\item \texttt{scanf} without a field-width limit.
+\end{itemize}
+
+String operations shall specify destination capacity and shall preserve null termination.
+
+\subsubsection{Binary Data}
+
+Binary buffers shall use \texttt{uint8\_t} and an explicit length. They shall not be treated as null-terminated strings.

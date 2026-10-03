@@ -1,0 +1,85 @@
+\subsubsection{Applicability}
+
+Concurrency includes operating-system threads, interrupt handlers, callbacks, signal handlers, asynchronous tasks, and hardware event handlers.
+
+Concurrency shall not be introduced unless it is required by the system design.
+
+\subsubsection{Shared State}
+
+Shared mutable state shall be minimized.
+
+Every shared object shall have a documented synchronization strategy.
+
+The following are prohibited:
+
+\begin{itemize}
+	\item undocumented shared mutable state;
+	\item data races;
+	\item unsynchronized access to shared objects;
+	\item relying on timing for correctness;
+	\item using \texttt{volatile} as a replacement for synchronization.
+\end{itemize}
+
+\subsubsection{Ownership}
+
+Each shared object shall have one of the following documented policies:
+
+\begin{itemize}
+	\item protected by a mutex;
+	\item accessed only by one thread;
+	\item accessed atomically;
+	\item immutable after initialization;
+	\item exchanged through a documented message-passing interface.
+\end{itemize}
+
+\subsubsection{Mutexes}
+
+Mutex acquisition and release shall be visibly paired.
+
+\begin{lstlisting}[language=C]
+mutex_lock(&state_mutex);
+
+update_shared_state();
+
+mutex_unlock(&state_mutex);
+\end{lstlisting}
+
+A mutex shall not be held while calling an external function unless the locking contract explicitly permits it.
+
+\subsubsection{Lock Ordering}
+
+When multiple locks are required, the project shall define a global lock ordering.
+
+Locks shall always be acquired in that order to prevent deadlock.
+
+\subsubsection{Atomics}
+
+C11 atomic objects shall be used only when their memory-ordering behavior is understood and documented.
+
+The default sequentially consistent ordering shall be preferred unless a different ordering is justified.
+
+\subsubsection{Interrupts and Signal Handlers}
+
+Signal handlers and interrupt handlers shall perform minimal work.
+
+They shall not call functions that are not safe in their execution context.
+
+Communication with the main application shall use an approved mechanism, such as an atomic flag, queue, or event object.
+
+\subsubsection{Thread Cancellation}
+
+Thread cancellation shall not be used unless cleanup behavior is fully defined.
+
+Resources shall not be leaked when a thread exits or is cancelled.
+
+\subsubsection{Testing}
+
+Concurrent code shall be tested under:
+
+\begin{itemize}
+	\item repeated execution;
+	\item increased scheduling variability;
+	\item thread and lock analysis;
+	\item race detection where supported;
+	\item sanitizer-enabled builds where supported.
+\end{itemize}

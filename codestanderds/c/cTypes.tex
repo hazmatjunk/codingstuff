@@ -1,0 +1,68 @@
+\subsubsection{Fixed-Width Integer Types}
+
+Fixed-width integer types shall be used when the width or signedness is important.
+
+\begin{lstlisting}[language=C]
+#include <stdint.h>
+
+uint32_t packet_length;
+int32_t temperature;
+uint8_t status;
+\end{lstlisting}
+
+The types \texttt{int8\_t}, \texttt{uint8\_t}, and similar types shall be used instead of assuming the size of \texttt{char}, \texttt{short}, or \texttt{int}.
+
+\subsubsection{Boolean Values}
+
+Boolean values shall use \texttt{bool} from \texttt{<stdbool.h>}.
+
+\begin{lstlisting}[language=C]
+#include <stdbool.h>
+
+bool packet_is_valid;
+\end{lstlisting}
+
+Integer values shall not be used as booleans unless the conversion is explicit and documented.
+
+\subsubsection{Enumerations}
+
+Enumerations shall be used for finite sets of named states.
+
+\begin{lstlisting}[language=C]
+typedef enum {
+	MODE_IDLE = 0,
+	MODE_ACTIVE,
+	MODE_ERROR
+} mode_t;
+\end{lstlisting}
+
+\subsubsection{Explicit Conversions}
+
+Conversions that may change signedness, width, precision, or interpretation shall be explicit.
+
+\begin{lstlisting}[language=C]
+uint32_t value = 0U;
+uint16_t reduced_value = (uint16_t)value;
+\end{lstlisting}
+
+The conversion shall be safe. A cast shall not be used merely to silence a compiler warning.
+
+\subsubsection{Const Correctness}
+
+The \texttt{const} qualifier shall be used whenever an object is not modified through a pointer.
+
+\begin{lstlisting}[language=C]
+void process_packet(const uint8_t *data, size_t length);
+\end{lstlisting}
+
+\subsubsection{Additional Rules}
+
+\begin{itemize}
+	\item Do not compare signed and unsigned values without an explicit conversion or documented reason.
+	\item Do not use plain \texttt{char} for binary data.
+	\item Do not use \texttt{float} or \texttt{double} for exact quantities.
+	\item Do not rely on the size of \texttt{int}.
+	\item Do not use casts to convert unrelated pointer types.
+	\item Do not use type-punning through incompatible pointer types.
+	\item Do not use an enumeration outside its defined semantic domain.
+\end{itemize}

@@ -1,0 +1,40 @@
+\subsubsection{Function Requirements}
+
+Functions shall:
+
+\begin{itemize}
+	\item have one primary responsibility;
+	\item have a clearly defined contract;
+	\item validate input parameters;
+	\item return an explicit status for recoverable failure;
+	\item avoid hidden side effects;
+	\item avoid modifying caller data unless documented;
+	\item remain short enough for complete review.
+	\item Limit nesting depth to four levels.
+\end{itemize}
+
+Functions should normally have no more than 10 local variables. If more are required, the function should be refactored into smaller functions.
+
+Every function that may be accessed from outside its module MUST include a function prototype (declaration).
+
+Function declarations and definitions that accept no parameters MUST explicitly use (void), never empty parentheses ().
+
+Function implementations MUST place the return type and any storage-class or qualifier keywords on a separate line from the function name.
+
+A function SHOULD have at most 2 return points: one early return at the top of the function for parameter/argument validation, and one return at the end of the function. Avoid return statements in the middle of the function body; use a return-value variable to accumulate the result instead.
+
+
+
+\subsubsection{Parameter Validation}
+
+Public functions shall validate all pointer parameters, lengths, ranges, and state assumptions that are not guaranteed by the type system.
+
+\subsubsection{Return Values}
+
+The caller shall check every non-void return value.
+
+If a return value is intentionally ignored, the reason shall be explicit.
+
+\begin{lstlisting}[language=C]
+(void)log_message("startup complete");
+\end{lstlisting}

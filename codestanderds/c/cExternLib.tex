@@ -1,0 +1,43 @@
+\subsubsection{Library Policy}
+
+The project shall depend only on:
+
+\begin{itemize}
+	\item the ISO C11 standard library;
+	\item operating-system interfaces required by the target;
+	\item project-owned libraries;
+	\item third-party libraries approved in the dependency register.
+\end{itemize}
+
+A third-party library shall not be added solely for convenience when the required functionality can be implemented safely using C11 or existing project code.
+
+\subsubsection{Approval Requirements}
+
+Each external library shall have:
+
+\begin{itemize}
+	\item a documented purpose;
+	\item a version pinned in the build system;
+	\item a license record;
+	\item a maintenance status;
+	\item a security review;
+	\item a documented public API surface;
+	\item a removal or replacement plan where practical.
+\end{itemize}
+
+\subsubsection{Wrapper Requirement}
+
+External libraries shall be accessed through a project-owned wrapper module.
+
+Application modules shall not include third-party headers directly unless the dependency is explicitly approved as part of the public architecture.
+
+\begin{lstlisting}[language=C]
+/* project_json.h */
+
+#ifndef PROJECT_JSON_H
+#define PROJECT_JSON_H
+
+int project_json_parse(const char *text);
+
+#endif
+\end{lstlisting}

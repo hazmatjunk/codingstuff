@@ -1,0 +1,26 @@
+\subsubsection{Control Flow}
+
+The following are prohibited:
+
+\begin{itemize}
+	\item \texttt{goto};
+	\item \texttt{setjmp};
+	\item \texttt{longjmp};
+	\item recursion;
+	\item deeply nested conditionals;
+	\item hidden control flow in macros.
+\end{itemize}
+
+\subsubsection{Loops}
+
+Loops shall have a clear termination condition.
+
+Loops in deterministic or safety-critical code shall have a statically reviewable upper bound.
+
+\begin{lstlisting}[language=C]
+for (size_t index = 0U; index < MAX_ITEMS; ++index) {
+	process_item(items[index]);
+}
+\end{lstlisting}
+
+A loop controlled by external input shall still have a maximum iteration limit.

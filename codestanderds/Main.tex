@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper]{article}
+
+\input{preamble.tex}
+\input{metadata.tex}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% Shared project rules
+\section{Introduction}
+\input{sections/introduction.tex}
+
+\section{Scope}
+\input{sections/scope.tex}
+
+\section{Terminology}
+\input{sections/terminology.tex}
+
+\section{General Design Principles}
+\input{sections/genPrinciples.tex}
+
+\section{Requirements and Rule Priority}
+\input{sections/requirments.tex}
+
+% Language-specific standards
+\part{C Programming Standard}
+\input{c/cStandered.tex}
+
+\part{Python Programming Standard}
+\input{python/pyStandered.tex}
+
+% Tooling and verification
+\part{Tooling and Verification}
+\input{tooling/cTooling.tex}
+\input{tooling/pyTooling.tex}
+\input{tooling/staticAnalisis.tex}
+\input{tooling/ciPipeline.tex}
+
+% Review and process
+\part{Development Process}
+\input{sections/testAndVerification.tex}
+\input{sections/codeReview.tex}
+\input{sections/exceptions.tex}
+
+% Checklists
+\appendix
+
+\section{C Review Checklist}
+\input{checklists/cReviewChecklists.tex}
+
+\section{Python Review Checklist}
+\input{checklists/pyReviewChecklist.tex}
+
+\section{Release Checklist}
+%\input{checklists/release-checklist}
+
+\bibliographystyle{plain}
+\bibliography{bibliography.bib}
+\nocite{*}
+
+
+\end{document}

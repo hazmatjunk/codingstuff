@@ -1,0 +1,84 @@
+\subsubsection{General Requirement}
+
+Every object shall be initialized before it is read.
+
+Initialization shall occur as close as practical to the declaration.
+
+\begin{lstlisting}[language=C]
+uint32_t retry_count = 0U;
+bool packet_is_valid = false;
+\end{lstlisting}
+
+Uninitialized local variables are prohibited.
+
+\subsubsection{Default Initialization}
+
+Objects shall be initialized to a valid and documented default state.
+
+\begin{lstlisting}[language=C]
+struct device device = {
+	.state = DEVICE_STATE_OFF,
+	.timeout_ms = 1000U,
+	.error_code = ERROR_NONE
+};
+\end{lstlisting}
+
+Designated initializers shall be used for structures when they improve clarity or protect against changes in member ordering.
+
+\subsubsection{Structures}
+
+Structure members shall be initialized explicitly when their zero value is not the required default.
+
+The following form is preferred for complete initialization:
+
+\begin{lstlisting}[language=C]
+struct configuration configuration = {
+	.enabled = true,
+	.retry_limit = 3U,
+	.timeout_ms = 500U
+};
+\end{lstlisting}
+
+\subsubsection{Arrays}
+
+Arrays shall be initialized explicitly when partial initialization could hide an error.
+
+\begin{lstlisting}[language=C]
+uint8_t header[HEADER_LENGTH] = {0U};
+\end{lstlisting}
+
+\subsubsection{Pointers}
+
+Pointers shall be initialized to a valid object or to \texttt{NULL}.
+
+\begin{lstlisting}[language=C]
+uint8_t *buffer = NULL;
+\end{lstlisting}
+
+A pointer shall not be dereferenced unless its validity has been established.
+
+\subsubsection{Static Storage}
+
+Static and file-scope objects shall have an explicit initializer when the initial state is important to the module contract.
+
+\subsubsection{Initialization Functions}
+
+Initialization functions shall:
+
+\begin{itemize}
+	\item be called before any other operation on the object;
+	\item be safe to call only according to their documented contract;
+	\item establish all required invariants;
+	\item report failure explicitly;
+	\item leave the object in a documented state when initialization fails.
+\end{itemize}
+
+\begin{lstlisting}[language=C]
+int device_init(device_t *device);
+\end{lstlisting}
+
+\subsubsection{Partial Initialization}
+
+An object shall not be exposed to other modules until initialization is complete.
+
+If initialization requires multiple steps, cleanup shall be defined for each partially initialized state.

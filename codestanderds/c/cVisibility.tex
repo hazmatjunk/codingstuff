@@ -1,0 +1,71 @@
+\subsubsection{Public Declarations}
+
+A public declaration is any declaration exposed through a module's interface header.
+
+Public declarations shall be limited to:
+
+\begin{itemize}
+	\item functions intended for use by other modules;
+	\item opaque object types;
+	\item public enumerations;
+	\item public constants;
+	\item public error codes;
+	\item public configuration structures when required by the interface.
+\end{itemize}
+
+\subsubsection{Private Declarations}
+
+Private functions, variables, constants, and types shall be defined in the corresponding source file.
+
+Private file-scope declarations shall use the \texttt{static} specifier.
+
+\begin{lstlisting}[language=C]
+static uint32_t calculate_checksum(const uint8_t *data,
+                                   size_t length);
+
+static uint32_t checksum_seed = 0U;
+\end{lstlisting}
+
+\subsubsection{Global Variables}
+
+Global mutable variables are prohibited.
+
+File-scope variables shall be private unless there is a documented architectural reason for making them public.
+
+Public variables shall not be used for ordinary module communication. Functions shall be used instead.
+
+\subsubsection{Opaque Types}
+
+Public headers should expose opaque structures rather than structure definitions.
+
+\begin{lstlisting}[language=C]
+/* buffer.h */
+
+#ifndef PROJECT_BUFFER_H
+#define PROJECT_BUFFER_H
+
+#include <stddef.h>
+#include <stdint.h>
+
+typedef struct buffer buffer_t;
+
+buffer_t *buffer_create(uint8_t *storage, size_t capacity);
+int buffer_write(buffer_t *buffer,
+                 const uint8_t *data,
+                 size_t length);
+size_t buffer_size(const buffer_t *buffer);
+
+#endif
+\end{lstlisting}
+
+The structure definition remains private:
+
+\begin{lstlisting}[language=C]
+/* buffer.c */
+
+struct buffer {
+	uint8_t *storage;
+	size_t capacity;
+	size_t length;
+};
+\end{lstlisting}

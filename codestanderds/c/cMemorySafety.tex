@@ -1,0 +1,70 @@
+\subsubsection{General Requirement}
+
+Code shall not produce:
+
+\begin{itemize}
+	\item out-of-bounds accesses;
+	\item use-after-free;
+	\item double-free;
+	\item invalid frees;
+	\item null-pointer dereferences;
+	\item uninitialized reads;
+	\item memory leaks;
+	\item access through a dangling pointer;
+	\item writes through a read-only object;
+	\item integer-overflow-derived allocation sizes.
+\end{itemize}
+
+For maximum saftey general rules include:
+
+\begin{itemize}
+    \item no heap allocation in core logic;
+    \item no heap allocation unless needed;
+    \item caller-provided buffers where possible;
+    \item explicit buffer lengths;
+    \item no hidden ownership transfer;
+    \item no ownership implied only by naming;
+    \item cleanup paths tested.
+\end{itemize}
+
+\subsubsection{Allocation Policy}
+
+Static allocation and caller-provided storage are preferred.
+
+Dynamic allocation shall be avoided in ordinary modules and is prohibited after initialization in deterministic or safety-critical modules.
+
+Every allocation shall have:
+
+\begin{itemize}
+	\item one owner;
+	\item one documented release path;
+	\item a checked failure path;
+	\item a defined maximum size;
+	\item a test for boundary conditions.
+\end{itemize}
+
+\subsubsection{Allocation Arithmetic}
+
+Allocation-size arithmetic shall be checked before allocation.
+
+\begin{lstlisting}[language=C]
+if (count > SIZE_MAX / sizeof(*items)) {
+	return ERROR_SIZE_OVERFLOW;
+}
+
+items = malloc(count * sizeof(*items));
+if (items == NULL) {
+	return ERROR_OUT_OF_MEMORY;
+}
+\end{lstlisting}
+
+\subsubsection{Ownership}
+
+Functions shall document whether pointer parameters are:
+
+\begin{itemize}
+	\item borrowed and not retained;
+	\item owned by the caller;
+	\item transferred to the callee;
+	\item returned with ownership transferred to the caller.
+\end{itemize}
