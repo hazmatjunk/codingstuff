@@ -26,12 +26,15 @@
 \input{sections/requirments.tex}
 
 % Language-specific standards
+\pagebreak
 \part{C Programming Standard}
 \input{c/cStandered.tex}
 
+\pagebreak
 \part{Python Programming Standard}
 \input{python/pyStandered.tex}
 
+\pagebreak
 % Tooling and verification
 \part{Tooling and Verification}
 \input{tooling/cTooling.tex}
@@ -45,6 +48,7 @@
 \input{sections/codeReview.tex}
 \input{sections/exceptions.tex}
 
+\pagebreak
 % Checklists
 \appendix
 
@@ -57,9 +61,15 @@
 \section{Release Checklist}
 %\input{checklists/release-checklist}
 
-\bibliographystyle{plain}
-\bibliography{bibliography.bib}
+\section{Release Checklist}
+
 \nocite{*}
 
+\addcontentsline{toc}{chapter}{References}
+
+\printbibliography[
+    heading=bibintoc,
+    title={References}
+]
 
 \end{document}
