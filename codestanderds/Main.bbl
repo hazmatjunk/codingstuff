@@ -19,6 +19,41 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global/global}
+    \entry{ANSIZ535.6}{standard}{}{}
+      \name{author}{1}{}{%
+        {{hash=5fce6ba9e6bca4e6399380b88f5ed0b6}{%
+           family={{American National Standards Institute}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Washington, DC}%
+      }
+      \list{organization}{1}{%
+        {American National Standards Institute}%
+      }
+      \strng{namehash}{5fce6ba9e6bca4e6399380b88f5ed0b6}
+      \strng{fullhash}{5fce6ba9e6bca4e6399380b88f5ed0b6}
+      \strng{fullhashraw}{5fce6ba9e6bca4e6399380b88f5ed0b6}
+      \strng{bibnamehash}{5fce6ba9e6bca4e6399380b88f5ed0b6}
+      \strng{authorbibnamehash}{5fce6ba9e6bca4e6399380b88f5ed0b6}
+      \strng{authornamehash}{5fce6ba9e6bca4e6399380b88f5ed0b6}
+      \strng{authorfullhash}{5fce6ba9e6bca4e6399380b88f5ed0b6}
+      \strng{authorfullhashraw}{5fce6ba9e6bca4e6399380b88f5ed0b6}
+      \field{labelalpha}{Ame}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{ANSI Z535.6}
+      \field{title}{Product Safety Information in Product Manuals, Instructions, and Other Collateral Materials}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://webstore.ansi.org/standards/nema/ansiz5352023
+      \endverb
+      \verb{url}
+      \verb https://webstore.ansi.org/standards/nema/ansiz5352023
+      \endverb
+    \endentry
     \entry{Windows}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=c5c8ddcdf76354285ae31bc42714c096}{%
@@ -77,6 +112,462 @@
       \endverb
       \verb{url}
       \verb https://peps.python.org/pep-0008/
+      \endverb
+    \endentry
+    \entry{ISO80000}{standard}{}{}
+      \name{author}{2}{}{%
+        {{hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+        {{hash=1bfbc8812fd493bd4a6c196b196d1291}{%
+           family={{International Electrotechnical Commission}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \list{organization}{2}{%
+        {International Organization for Standardization}%
+        {International Electrotechnical Commission}%
+      }
+      \strng{namehash}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{fullhash}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{fullhashraw}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{bibnamehash}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{authorbibnamehash}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{authornamehash}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{authorfullhash}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{authorfullhashraw}{64f571336774620bb71aeea10e0e7eb7}
+      \field{extraname}{1}
+      \field{labelalpha}{II}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Specify the applicable part and edition}
+      \field{number}{ISO 80000 series}
+      \field{title}{Quantities and Units}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.iso.org/search.html?PROD_isoorg_en[query]=ISO 80000&PROD_isoorg_en[menu][facet]=standard
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/search.html?PROD_isoorg_en[query]=ISO%2080000&PROD_isoorg_en[menu][facet]=standard
+      \endverb
+    \endentry
+    \entry{ISOIEC17025:2017}{standard}{}{}
+      \name{author}{2}{}{%
+        {{hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+        {{hash=1bfbc8812fd493bd4a6c196b196d1291}{%
+           family={{International Electrotechnical Commission}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \list{organization}{2}{%
+        {International Organization for Standardization}%
+        {International Electrotechnical Commission}%
+      }
+      \strng{namehash}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{fullhash}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{fullhashraw}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{bibnamehash}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{authorbibnamehash}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{authornamehash}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{authorfullhash}{64f571336774620bb71aeea10e0e7eb7}
+      \strng{authorfullhashraw}{64f571336774620bb71aeea10e0e7eb7}
+      \field{extraname}{2}
+      \field{labelalpha}{II17}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{ISO/IEC 17025:2017}
+      \field{title}{General Requirements for the Competence of Testing and Calibration Laboratories}
+      \field{year}{2017}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/66912.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/66912.html
+      \endverb
+    \endentry
+    \entry{IEEE82079-1:2019}{standard}{}{}
+      \name{author}{3}{}{%
+        {{hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+        {{hash=1bfbc8812fd493bd4a6c196b196d1291}{%
+           family={{International Electrotechnical Commission}},
+           familyi={I\bibinitperiod}}}%
+        {{hash=e2dd85d5ed4ff94326a8b5cb5fb21ab4}{%
+           family={{Institute of Electrical and Electronics Engineers}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \list{organization}{2}{%
+        {International Organization for Standardization}%
+        {International Electrotechnical Commission}%
+      }
+      \strng{namehash}{0550120d17ba9cf8b0b1c61e2f38d5cd}
+      \strng{fullhash}{0550120d17ba9cf8b0b1c61e2f38d5cd}
+      \strng{fullhashraw}{0550120d17ba9cf8b0b1c61e2f38d5cd}
+      \strng{bibnamehash}{0550120d17ba9cf8b0b1c61e2f38d5cd}
+      \strng{authorbibnamehash}{0550120d17ba9cf8b0b1c61e2f38d5cd}
+      \strng{authornamehash}{0550120d17ba9cf8b0b1c61e2f38d5cd}
+      \strng{authorfullhash}{0550120d17ba9cf8b0b1c61e2f38d5cd}
+      \strng{authorfullhashraw}{0550120d17ba9cf8b0b1c61e2f38d5cd}
+      \field{labelalpha}{III19}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{IEC/IEEE 82079-1:2019}
+      \field{title}{Preparation of Information for Use---Part 1: Principles and General Requirements}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/71620.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/71620.html
+      \endverb
+    \endentry
+    \entry{ISO3864}{standard}{}{}
+      \name{author}{1}{}{%
+        {{hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \list{organization}{1}{%
+        {International Organization for Standardization}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{extraname}{1}
+      \field{labelalpha}{Int}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Specify the applicable part and edition}
+      \field{number}{ISO 3864}
+      \field{title}{Graphical Symbols---Safety Colours and Safety Signs}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/51021.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/51021.html
+      \endverb
+    \endentry
+    \entry{ISOHouseStyle}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {International Organization for Standardization}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{extraname}{2}
+      \field{labelalpha}{Int}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Editorial and formatting guidance}
+      \field{title}{ISO House Style}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.iso.org/search.html?q=ISO%20House%20Style
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/search.html?q=ISO%20House%20Style
+      \endverb
+    \endentry
+    \entry{ISO12100:2010}{standard}{}{}
+      \name{author}{1}{}{%
+        {{hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \list{organization}{1}{%
+        {International Organization for Standardization}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{extraname}{3}
+      \field{labelalpha}{Int10}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{ISO 12100:2010}
+      \field{title}{Safety of Machinery---General Principles for Design---Risk Assessment and Risk Reduction}
+      \field{year}{2010}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/51528.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/51528.html
+      \endverb
+    \endentry
+    \entry{ISO14289-1:2014}{standard}{}{}
+      \name{author}{1}{}{%
+        {{hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \list{organization}{1}{%
+        {International Organization for Standardization}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{extraname}{4}
+      \field{labelalpha}{Int14}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{ISO 14289-1:2014}
+      \field{title}{Document Management Applications---Electronic Document File Format Enhancement for Accessibility---Part 1: Use of ISO 32000-1---PDF/UA-1}
+      \field{year}{2014}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/64599.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/64599.html
+      \endverb
+    \endentry
+    \entry{ISO15489-1:2016}{standard}{}{}
+      \name{author}{1}{}{%
+        {{hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \list{organization}{1}{%
+        {International Organization for Standardization}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{extraname}{5}
+      \field{labelalpha}{Int16}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{ISO 15489-1:2016}
+      \field{title}{Information and Documentation---Records Management---Part 1: Concepts and Principles}
+      \field{year}{2016}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/62542.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/62542.html
+      \endverb
+    \endentry
+    \entry{ISO45001:2018}{standard}{}{}
+      \name{author}{1}{}{%
+        {{hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \list{organization}{1}{%
+        {International Organization for Standardization}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{extraname}{6}
+      \field{labelalpha}{Int18}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{ISO 45001:2018}
+      \field{title}{Occupational Health and Safety Management Systems---Requirements with Guidance for Use}
+      \field{year}{2018}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/45001
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/45001
+      \endverb
+    \endentry
+    \entry{ISO14289-2:2024}{standard}{}{}
+      \name{author}{1}{}{%
+        {{hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \list{organization}{1}{%
+        {International Organization for Standardization}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{extraname}{7}
+      \field{labelalpha}{Int24}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{ISO 14289-2:2024}
+      \field{title}{Document Management Applications---Electronic Document File Format Enhancement for Accessibility---Part 2: Use of ISO 32000-2---PDF/UA-2}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/82278.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/82278.html
+      \endverb
+    \endentry
+    \entry{ISO9001:2026}{standard}{}{}
+      \name{author}{1}{}{%
+        {{hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \list{organization}{1}{%
+        {International Organization for Standardization}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{extraname}{8}
+      \field{labelalpha}{Int26}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{ISO 9001:2026}
+      \field{title}{Quality Management Systems---Requirements}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/08/84/88464.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/08/84/88464.html
+      \endverb
+    \endentry
+    \entry{ISO2145:1978}{standard}{}{}
+      \name{author}{1}{}{%
+        {{hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \list{organization}{1}{%
+        {International Organization for Standardization}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{extraname}{9}
+      \field{labelalpha}{Int78}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{ISO 2145:1978}
+      \field{title}{Documentation---Numbering of Divisions and Subdivisions in Written Documents}
+      \field{year}{1978}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/6937.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/6937.html
       \endverb
     \endentry
     \entry{Linux2025}{misc}{}{}

@@ -12,7 +12,7 @@
 
 % Gen Part
 \pagebreak
-\part{General Project Rules}
+\part{General}
 
 % Shared project rules
 \section{Introduction}
@@ -45,8 +45,7 @@ The standards apply to all contributors, including permanent developers, tempora
 
 Unless a section explicitly states otherwise, a requirement applies to both new work and modifications to existing work. Existing code or documentation does not need to be changed solely to satisfy a newly introduced standard unless it is being substantially modified, reviewed for compliance, or identified as a risk.
 
-This document does not replace external legal, regulatory, contractual, safety, security, or organizational requirements. Where such requirements
-apply, they shall be identified and incorporated into the relevant project plans and deliverables.
+This document does not replace external legal, regulatory, contractual, safety, security, or organizational requirements. Where such requirements apply, they shall be identified and incorporated into the relevant project plans and deliverables.
 
 The scope of a particular rule may be limited by the rule itself. For example, a rule may apply only to C source code, Python source code, user-facing documentation, or systems used to build and test the project.
 
@@ -64,33 +63,33 @@ The scope of a particular rule may be limited by the rule itself. For example, a
 \part{Document Standards}
 \input{docStandereds/docStandered.tex}
 
-% comp Part
-\pagebreak
-\part{Computer Standards}
-\input{computerStanderds/compStandered.tex}
-
 % Language-specific standards
-\pagebreak
-\part{C Programming Standard}
-\input{c/cStandered.tex}
-
 \pagebreak
 \part{Python Programming Standard}
 \input{python/pyStandered.tex}
 
 \pagebreak
+\part{C Programming Standard}
+\input{c/cStandered.tex}
+
+% comp Part
+\pagebreak
+\part{Computer Standards}
+\input{computerStanderds/compStandered.tex}
+
+%\pagebreak
 % Tooling and verification
-\part{Tooling and Verification}
-\input{tooling/cTooling.tex}
-\input{tooling/pyTooling.tex}
-\input{tooling/staticAnalisis.tex}
-\input{tooling/ciPipeline.tex}
+%\part{Tooling and Verification}
+%\input{tooling/cTooling.tex}
+%\input{tooling/pyTooling.tex}
+%\input{tooling/staticAnalisis.tex}
+%\input{tooling/ciPipeline.tex}
 
 % Review and process
-\part{Development Process}
-\input{sections/testAndVerification.tex}
-\input{sections/codeReview.tex}
-\input{sections/exceptions.tex}
+%\part{Development Process}
+%\input{sections/testAndVerification.tex}
+%\input{sections/codeReview.tex}
+%\input{sections/exceptions.tex}
 
 \pagebreak
 % Checklists
@@ -99,13 +98,13 @@ The scope of a particular rule may be limited by the rule itself. For example, a
 \section{Example Documents:}
 \input{appendixA/appendixA.tex}
 
-\section{C Review Checklist}
-\input{checklists/cReviewChecklists.tex}
+%\section{C Review Checklist}
+%\input{checklists/cReviewChecklists.tex}
 
-\section{Python Review Checklist}
-\input{checklists/pyReviewChecklist.tex}
+%\section{Python Review Checklist}
+%\input{checklists/pyReviewChecklist.tex}
 
-\section{Release Checklist}
+%\section{Release Checklist}
 %\input{checklists/release-checklist}
 
 \nocite{*}

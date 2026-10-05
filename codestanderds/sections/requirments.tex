@@ -1,8 +1,8 @@
-This section defines how requirements and rules in this document shall be interpreted and prioritized.
+This section defines how requirements and rules in this document should be interpreted and prioritized.
 
 \subsection{Requirement Characteristics}
 
-Project requirements should be:
+Project requirements \should~be:
 \begin{itemize}
     \item clear and unambiguous;
     \item necessary for the intended purpose;
@@ -12,11 +12,13 @@ Project requirements should be:
     \item traceable to an identified source or stakeholder need.
 \end{itemize}
 
-When a requirement is unclear, the ambiguity shall be resolved before the affected work is finalized. The resolution should be recorded when it may affect implementation, testing, review, or future maintenance.
+When a requirement is unclear, the ambiguity \should~be resolved before the affected work is finalized.
+
+The resolution \should~be recorded when it may affect implementation, testing, review, or future maintenance.
 
 \subsection{Rule Priority}
 
-When two requirements or rules conflict, they shall normally be applied in the following order of priority:
+When two requirements or rules conflict, they \should~normally be applied in the following order of priority:
 \begin{enumerate}
     \item applicable laws, regulations, and safety requirements;
     \item contractual, customer, or externally imposed requirements;
@@ -28,20 +30,21 @@ When two requirements or rules conflict, they shall normally be applied in the f
 
 A more specific rule takes precedence over a more general rule at the same priority level. A language-specific rule takes precedence over a general code rule when the two rules address the same subject.
 
-Conflicts shall not be resolved silently. The conflict, its impact, and the chosen resolution should be documented when the decision may affect the project or future contributors.
+Conflicts \shouldnot~be resolved silently. The conflict, its impact, and the chosen resolution \should~be documented when the decision may affect the project or future contributors.
 
 \subsection{Mandatory and Advisory Rules}
 
-Rules using the word ``\must'' are mandatory. A mandatory rule shall be followed unless an approved exception has been granted.
+Rules using the word ``\must'' are mandatory. A mandatory rule \should~be followed unless an approved exception has been granted.
 
-Rules using the word ``\should'' are advisory but represent the expected default practice. A deviation should have a reasonable technical
-justification, especially when it affects maintainability, portability, security, or verification.
+Rules using the word ``\should'' are advisory but represent the expected default practice. A deviation should have a reasonable technical justification, especially when it affects maintainability, portability, security, or verification.
 
 Rules using the word ``\may'' identify an allowed option and do not impose a requirement.
 
 \subsection{Exceptions}
 
-An exception is required when a mandatory rule cannot be followed. Exceptions shall be documented before release of the affected deliverable and should include:
+An exception is required when a mandatory rule cannot be followed.
+
+Exceptions \should~be documented before release and \should~include:
 \begin{itemize}
     \item the rule being waived;
     \item the affected files, components, or deliverables;
@@ -52,10 +55,6 @@ An exception is required when a mandatory rule cannot be followed. Exceptions sh
     \item an expiration date or review condition, where appropriate.
 \end{itemize}
 
-Exceptions should be limited in scope and duration. Temporary exceptions shall be reviewed periodically and removed when they are no longer required.
+Exceptions should be limited in scope and duration.
 
-\subsection{Compliance}
-
-Compliance may be demonstrated through code review, automated checks, static analysis, testing, inspection, documentation review, or other appropriate verification methods.
-
-A violation discovered during review shall be corrected, formally accepted as an exception, or recorded as a known issue with an assigned owner and planned resolution.
+Temporary exceptions \should~be reviewed periodically and removed when they are no longer required.
