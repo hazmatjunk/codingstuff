@@ -11,6 +11,9 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+
+\renewcommand{\familydefault}{\sfdefault} %set sans-serif
+
 \usepackage{microtype}
 
 \usepackage{enumitem}
@@ -21,6 +24,9 @@
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{pdfpages}
 
 \usepackage[style=alphabetic]{biblatex}
 
@@ -38,21 +44,15 @@
 
 \definecolor{codegray}{gray}{0.95}
 
-\lstset{
-    backgroundcolor=\color{codegray},
-    basicstyle=\ttfamily\small,
-    frame=single,
-    breaklines=true,
-    columns=fullflexible,
-    showstringspaces=false
-}
+\lstset{backgroundcolor=\color{codegray}, basicstyle=\ttfamily\small, frame=single, breaklines=true, columns=fullflexible, showstringspaces=false}
 
 % Requirement keywords
-\newcommand{\must}{\textbf{MUST}}
-\newcommand{\mustnot}{\textbf{MUST NOT}}
-\newcommand{\should}{\textbf{SHOULD}}
-\newcommand{\shouldnot}{\textbf{SHOULD NOT}}
-\newcommand{\may}{\textbf{MAY}}
+\DeclareRobustCommand{\must}{\textsf{\textbf{MUST}}}
+\DeclareRobustCommand{\mustnot}{\textsf{\textbf{MUST NOT}}}
+\DeclareRobustCommand{\should}{\textsf{\textbf{SHOULD}}}
+\DeclareRobustCommand{\shouldnot}{\textsf{\textbf{SHOULD NOT}}}
+\DeclareRobustCommand{\may}{\textsf{\textbf{MAY}}}
+\DeclareRobustCommand{\donot}{\textsf{\textbf{DO NOT}}}
 
 % Rule identifiers
 \newcommand{\ruleid}[1]{\texttt{#1}}
@@ -61,3 +61,73 @@
 \newcommand{\approved}{\textcolor{green!50!black}{Approved}}
 \newcommand{\draft}{\textcolor{orange!80!black}{Draft}}
 \newcommand{\reviewneeded}{\textcolor{red!70!black}{Review needed}}
+
+\makeatletter
+\@addtoreset{section}{part}
+\makeatother
+
+\renewcommand{\thesection}{\thepart.\arabic{section}}
+\renewcommand{\thesubsection}{\thepart.\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thepart.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+% \section formatting
+\titleformat{\section}
+  {\normalfont\large\bfseries} % Font style
+  {\thesection}                % Number
+  {1em}                        % Space between number and title
+  {}                           % Code before title
+
+\titlespacing*{\section}
+  {0pt}      % Left indentation
+  {3.5ex}    % Space before section
+  {1.5ex}    % Space after section
+
+  \titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}
+  {\thesubsection}
+  {1em}
+  {}
+
+\titlespacing*{\subsection}
+  {0pt}
+  {2.5ex}
+  {1ex}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\itshape}
+  {\thesubsubsection}
+  {1em}
+  {}
+
+\titlespacing*{\subsubsection}
+  {0pt}
+  {2ex}
+  {0.75ex}
+
+
+\usepackage{tocloft}
+
+\cftsetindents{section}{1.5em}{3em}
+\cftsetindents{subsection}{3.5em}{4em}
+\cftsetindents{subsubsection}{7em}{5em}
+
+\usepackage{titling}
+
+\pretitle{%
+    \begin{center}
+    \sffamily\Huge\bfseries
+}
+
+\posttitle{%
+    \par
+    \vskip 0.5em
+    \sffamily\large\normalfont
+    For Documents, Computer systems and the Languages; C, Python and LaTeX
+    \end{center}
+}
+
+\preauthor{\begin{center}\sffamily\large}
+\postauthor{\end{center}}
+
+\predate{\begin{center}\sffamily\normalsize}
+\postdate{\end{center}}

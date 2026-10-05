@@ -1,4 +1,4 @@
-\subsubsection{Module Structure}
+\subsection{Module Structure}
 
 Each module shall consist of:
 
@@ -11,7 +11,7 @@ Each module shall consist of:
 
 A module shall have one primary responsibility.
 
-\subsubsection{Header Independence}
+\subsection{Header Independence}
 
 Every public header shall compile independently when included into an otherwise empty translation unit.
 
@@ -24,7 +24,7 @@ int main(void)
 }
 \end{lstlisting}
 
-\subsubsection{Include Ownership}
+\subsection{Include Ownership}
 
 A source file shall include the header that declares its public interface before other project headers.
 
@@ -37,7 +37,7 @@ A source file shall include the header that declares its public interface before
 #include "memory.h"
 \end{lstlisting}
 
-\subsubsection{Circular Dependencies}
+\subsection{Circular Dependencies}
 
 Circular dependencies between modules are prohibited.
 

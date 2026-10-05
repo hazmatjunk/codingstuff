@@ -1,0 +1,177 @@
+\subsection{Purpose}
+
+The purpose of this section is to establish minimum requirements for protecting workstations, laptops, servers, mobile devices, virtual machines, and other endpoints from malware, unauthorized software, exploitation, and other malicious activity.
+
+These requirements are intended to:
+\begin{itemize}
+    \item Reduce the likelihood and impact of malware infections
+    \item Protect systems and data from unauthorized access, alteration, destruction, or disclosure
+    \item Ensure that endpoint security controls are deployed, maintained, and monitored
+    \item Establish requirements for software installation, removable media, and endpoint configuration
+    \item Support the timely detection, containment, investigation, and recovery from endpoint security events
+\end{itemize}
+
+\subsection{Endpoint Inventory}
+
+All endpoints owned, operated, managed, or used on behalf of the organization \must{} be recorded in the asset inventory where reasonably practicable.
+
+The inventory \should{} include:
+\begin{itemize}
+    \item Assigned user, system owner, or responsible department
+    \item Device type, hostname, and asset identifier
+    \item Operating system and version
+    \item Physical or logical location
+    \item Security software and protection status
+    \item Encryption status
+    \item Network access or security group
+    \item Support status and expected replacement date
+    \item Last check-in or management status
+    \item Date of the last review
+\end{itemize}
+
+Unknown, unauthorized, or unmanaged endpoints \must{} be investigated and either approved, secured, isolated, or removed from organizational networks.
+
+\subsection{Endpoint Security Controls}
+
+Endpoints \must{} use security controls appropriate to their operating system, purpose, risk, and the sensitivity of the information they process.
+
+Where supported and appropriate, endpoints \must{} use:
+\begin{itemize}
+    \item Anti-malware or endpoint detection and response software
+    \item Host-based firewalls
+    \item Secure configuration settings
+    \item Automatic security updates
+    \item Full-disk or volume encryption
+    \item Screen locking and session timeout
+    \item Application control or allowlisting
+    \item Secure boot or equivalent platform protections
+    \item Centralized endpoint management
+\end{itemize}
+
+Security controls \must{} remain enabled and operational. Users \mustnot{} disable, bypass, uninstall, or interfere with endpoint security controls unless specifically authorized for an approved administrative or troubleshooting purpose.
+
+Security tools \must{} be configured to report failures, outdated signatures or detection content, disabled protection, and endpoints that have not checked in within the expected period.
+
+\subsection{Secure Endpoint Configuration}
+
+Endpoints \must{} be securely configured before being placed into production or issued to a user.
+
+Administrators \must{}:
+\begin{itemize}
+    \item Change or disable default accounts and passwords
+    \item Remove unnecessary software, services, accounts, and components
+    \item Restrict administrative privileges
+    \item Enable supported security features
+    \item Configure automatic screen locking
+    \item Apply approved security and operating system updates
+    \item Configure host-based firewall rules where appropriate
+    \item Restrict access to removable media where required
+    \item Configure logging and monitoring
+    \item Document exceptions to the approved configuration
+\end{itemize}
+
+Endpoints \must{} use supported operating systems and applications whenever reasonably practicable. Unsupported software \must{} be removed, upgraded, isolated, or covered by a documented and approved exception.
+
+\subsection{Malware Protection}
+
+Anti-malware and endpoint detection tools \must{} be configured to scan files, processes, scripts, and other activity appropriate to the operating system and business use.
+
+Protection tools \should{}:
+\begin{itemize}
+    \item Receive updates automatically
+    \item Perform scheduled scans
+    \item Perform real-time or on-access scanning where supported
+    \item Detect potentially unwanted applications
+    \item Monitor suspicious process, script, and network activity
+    \item Prevent or quarantine known malicious files
+    \item Report detections and failures to responsible administrators
+\end{itemize}
+
+Administrators \must{} investigate malware detections according to the severity and potential impact of the event. Malware alerts \mustnot{} be dismissed without an appropriate review or documented reason.
+
+\subsection{Software and Application Control}
+
+Users \must{} install and use only approved software. Software obtained from unknown, unauthorized, or untrusted sources \mustnot{} be installed on organizational endpoints.
+
+Software installation \must{}:
+\begin{itemize}
+    \item Have a documented business or technical purpose
+    \item Use a trusted source
+    \item Be compatible with organizational security requirements
+    \item Be maintained and updated
+    \item Be removed when no longer required
+\end{itemize}
+
+Users \mustnot{} use unauthorized software, pirated software, software with known unaddressed vulnerabilities, or tools intended to bypass security controls.
+
+Where feasible, standard users \should{} not have local administrator privileges. Administrative privileges \must{} be granted only when required and \should{} be time-limited.
+
+\subsection{Removable Media}
+
+Removable media \must{} be used only when necessary and appropriate for the business purpose.
+
+Removable media:
+\begin{itemize}
+    \item \must{} be scanned for malware before use
+    \item \must{} be encrypted when it contains sensitive or restricted information
+    \item \must{} be protected from unauthorized access or loss
+    \item \must{} be obtained from an approved or trusted source
+    \item \must{} be securely erased or destroyed when no longer required
+\end{itemize}
+
+Unknown removable media \mustnot{} be connected to organizational endpoints unless it has been approved and scanned.
+
+\subsection{Email, Web, and File Protection}
+
+Email, web browsing, file-sharing, and collaboration systems \should{} use protections against malware, phishing, malicious links, malicious attachments, and unauthorized downloads.
+
+Users \must{} exercise caution when opening attachments, following links, or executing files received through email, messaging, websites, removable media, or file-sharing services.
+
+Users \must{} report suspected malware, phishing, unexpected security warnings, or unusual endpoint behavior promptly. Users \mustnot{} attempt to conceal, delete, or alter evidence of a suspected infection.
+
+\subsection{Endpoint Isolation and Response}
+
+An endpoint suspected of being compromised \must{} be isolated or disconnected from organizational networks when doing so will not create greater risk or disrupt critical safety-related operations.
+
+Isolation may include:
+\begin{itemize}
+    \item Disconnecting wired or wireless network access
+    \item Disabling a user account or session
+    \item Removing the device from a VPN
+    \item Blocking the device through network access controls
+    \item Quarantining malicious files or processes
+    \item Preventing access to sensitive systems
+\end{itemize}
+
+Administrators \must{} preserve relevant evidence where appropriate and coordinate further action with the incident-response process. Reimaging or wiping an endpoint \should{} not occur until evidence-preservation needs have been considered.
+
+\subsection{Mobile and Remote Endpoints}
+
+Mobile and remote endpoints accessing organizational systems \must{} use appropriate security controls, including:
+\begin{itemize}
+    \item Device authentication
+    \item Automatic screen locking
+    \item Encryption where supported
+    \item Approved operating systems and applications
+    \item Current security updates
+    \item Remote management or remote-wipe capability where appropriate
+    \item Protection against unauthorized access or loss
+\end{itemize}
+
+Lost or stolen endpoints \must{} be reported promptly. Access associated with a lost or stolen device \must{} be revoked, disabled, or otherwise protected as appropriate.
+
+\subsection{Endpoint Review}
+
+Endpoint protection status \must{} be reviewed periodically. The review \should{} verify that:
+\begin{itemize}
+    \item Endpoints are present in the asset inventory
+    \item Security tools are installed, enabled, and current
+    \item Operating systems and applications are supported and patched
+    \item Unauthorized software has been removed
+    \item Encryption and screen-lock settings are active where required
+    \item Administrative privileges remain appropriate
+    \item Malware detections and protection failures have been addressed
+    \item Inactive, lost, retired, or unmanaged endpoints have been secured or removed
+\end{itemize}
+
+Endpoints that cannot meet the required protection standards \must{} be isolated, remediated, replaced, or covered by a documented and approved exception.

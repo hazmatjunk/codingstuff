@@ -1,0 +1,200 @@
+\subsection{Purpose}
+
+This section defines requirements for reviewing, testing, measuring, and improving the organization's security and technology controls. It also defines the process for documenting, approving, monitoring, and closing exceptions to these procedures.
+
+The purpose is to ensure that controls remain effective, risks are understood, deficiencies are addressed, and deviations are formally managed.
+
+\subsection{Scope}
+
+These requirements apply to all systems, applications, infrastructure, processes, personnel, vendors, and controls covered by these procedures.
+
+They apply to:
+\begin{itemize}
+    \item Security and access-control reviews
+    \item Configuration and vulnerability assessments
+    \item Backup and recovery testing
+    \item Incident response exercises
+    \item Business continuity and disaster recovery testing
+    \item Physical security reviews
+    \item Vendor and cloud control reviews
+    \item Internal audits and compliance assessments
+    \item Exceptions and compensating controls
+\end{itemize}
+
+\subsection{Periodic Review}
+
+These procedures \must{} be reviewed at least annually and whenever there is a significant change to:
+\begin{itemize}
+    \item Systems, applications, or infrastructure
+    \item Business operations or organizational structure
+    \item Personnel or assigned responsibilities
+    \item Legal, regulatory, or contractual requirements
+    \item Threats, vulnerabilities, or business risks
+    \item Technology vendors or hosted services
+\end{itemize}
+
+Reviews \must{} determine whether the procedures remain appropriate, effective, current, and consistent with the organization's risks and responsibilities.
+
+\subsection{Control Testing}
+
+Security and technology controls \should{} be tested at a frequency appropriate to their importance and risk.
+
+Testing may include:
+\begin{itemize}
+    \item Access reviews
+    \item Configuration reviews
+    \item Vulnerability scanning
+    \item Patch verification
+    \item Backup restoration tests
+    \item Log and monitoring reviews
+    \item Phishing or security-awareness exercises
+    \item Incident response exercises
+    \item Disaster recovery exercises
+    \item Physical access reviews
+    \item Vendor and service-provider assessments
+\end{itemize}
+
+Critical controls \must{} be tested at least annually unless a documented risk assessment supports a different frequency.
+
+Testing \must{} be performed by a person or team with sufficient independence and competence. Individuals \should{} not approve the effectiveness of controls that they exclusively operate when independent review is reasonably practicable.
+
+\subsection{Test Planning}
+
+Each significant test \should{} have a documented plan that identifies:
+\begin{itemize}
+    \item The purpose and scope of the test
+    \item Systems, processes, or controls being tested
+    \item Test methods and success criteria
+    \item Responsible personnel
+    \item Planned date and duration
+    \item Potential operational impact
+    \item Required approvals and notifications
+    \item Evidence that will be collected
+\end{itemize}
+
+Testing \must{} be planned to minimize unnecessary disruption and mustnot{} create unacceptable risk to production systems or sensitive information.
+
+\subsection{Results and Corrective Actions}
+
+Test results \must{} be documented and communicated to the responsible owner.
+
+Each identified deficiency \should{} include:
+\begin{itemize}
+    \item Description of the finding
+    \item Affected system, process, or control
+    \item Risk and potential impact
+    \item Severity or priority
+    \item Recommended corrective action
+    \item Responsible owner
+    \item Target completion date
+    \item Current status
+\end{itemize}
+
+High-risk findings \must{} be addressed promptly or managed through an approved exception.
+
+Corrective actions \must{} be tracked until completion, formal acceptance, or replacement by an effective alternative control.
+
+\subsection{Exception Requirements}
+
+A requirement may be excepted only when compliance is not currently possible, would create a greater operational risk, or is not appropriate for the specific system or circumstance.
+
+Exceptions \must{} be documented before or, in an emergency, as soon as reasonably possible after the deviation occurs.
+
+Each exception record \must{} identify:
+\begin{itemize}
+    \item The requirement being excepted
+    \item The affected system, process, or information
+    \item The reason compliance is not possible or appropriate
+    \item The risks created by the exception
+    \item Compensating controls
+    \item The responsible system or business owner
+    \item The approving authority
+    \item The date approved
+    \item The expiration or review date
+    \item Required corrective actions
+\end{itemize}
+
+Exceptions \must{} be limited to the smallest practical scope and shortest practical duration.
+
+An exception \mustnot{} be used as a permanent substitute for implementing a reasonable security control unless the risk is formally accepted and periodically reviewed.
+
+\subsection{Exception Approval}
+
+Exceptions must be approved by an authority with sufficient responsibility for the affected risk.
+
+High-risk exceptions \must{} be approved by management or another designated risk authority.
+
+A person \mustnot{} approve their own exception when the exception affects systems, access, or controls for which they are directly responsible, unless no reasonable separation of duties exists and the approval is independently reviewed.
+
+\subsection{Compensating Controls}
+
+Compensating controls \must{} reduce the risk created by the exception and \must{} be appropriate to the sensitivity, criticality, and exposure of the affected system or information.
+
+Examples may include:
+\begin{itemize}
+    \item Additional monitoring
+    \item Network isolation
+    \item Restricted administrative access
+    \item Increased review frequency
+    \item Temporary manual procedures
+    \item Additional backups
+    \item Enhanced logging
+    \item Additional approval requirements
+\end{itemize}
+
+Compensating controls \must{} be documented, assigned to an owner, and tested to confirm that they are operating as intended.
+
+\subsection{Exception Review and Closure}
+
+Open exceptions \must{} be reviewed at least annually and more frequently when the risk is high or the exception is temporary.
+
+An exception \must{} be closed when:
+\begin{itemize}
+    \item The original requirement has been implemented
+    \item The affected system has been replaced or retired
+    \item The risk no longer exists
+    \item The exception has expired and is not renewed
+    \item The responsible authority withdraws approval
+\end{itemize}
+
+Closed exceptions \should{} include evidence of the final action and the date of closure.
+
+Expired exceptions \mustnot{} remain active without renewed approval.
+
+\subsection{Evidence and Records}
+
+Evidence of reviews and tests \must{} be retained according to applicable records-management requirements.
+
+Evidence may include:
+\begin{itemize}
+    \item Test plans and results
+    \item Approval records
+    \item Access review reports
+    \item Vulnerability and configuration reports
+    \item Backup restoration records
+    \item Incident and recovery exercise records
+    \item Corrective-action tracking
+    \item Exception records
+\end{itemize}
+
+Evidence containing sensitive information \must{} be protected according to its information classification.
+
+\subsection{Reporting}
+
+Management \should{} receive periodic reports regarding:
+\begin{itemize}
+    \item Significant control deficiencies
+    \item Overdue corrective actions
+    \item Open high-risk exceptions
+    \item Testing completion and results
+    \item Repeated findings
+    \item Trends in incidents, vulnerabilities, and control failures
+\end{itemize}
+
+Significant or urgent findings \must{} be reported promptly rather than waiting for the normal reporting cycle.
+
+\subsection{Continuous Improvement}
+
+Review and testing results \should{} be used to improve procedures, training, technical controls, documentation, and resource allocation.
+
+Repeated failures \must{} be investigated to determine whether the underlying process, ownership, training, or control design requires improvement.

@@ -1,0 +1,163 @@
+\subsection{Purpose}
+
+Patch and vulnerability-management procedures identify, evaluate, prioritize, remediate, and monitor weaknesses in systems, applications, devices, networks, cloud resources, and other technology assets.
+
+The purpose of these procedures is to reduce the likelihood that vulnerabilities will be exploited and to ensure that security updates are applied in a timely and controlled manner.
+
+\subsection{Asset Coverage}
+
+Patch and vulnerability management \must{} apply to all supported technology resources, including:
+\begin{itemize}
+    \item Servers, workstations, laptops, and mobile devices
+    \item Operating systems, applications, databases, and middleware
+    \item Network devices, firewalls, wireless systems, and VPN equipment
+    \item Virtual machines, containers, hypervisors, and cloud resources
+    \item Security appliances and management platforms
+    \item Firmware, drivers, libraries, and third-party components
+    \item Internet-facing systems and externally hosted services
+\end{itemize}
+
+Systems and applications \must{} be included in the asset inventory so that their ownership, software versions, support status, and patch requirements can be tracked.
+
+Unsupported or end-of-life systems \must{} be identified and documented. Such systems \must{} be replaced, upgraded, isolated, or retired as soon as reasonably practicable.
+
+\subsection{Vulnerability Identification}
+
+The organization \must{} use appropriate sources to identify vulnerabilities and security updates affecting its systems.
+
+Vulnerability information may be obtained from:
+\begin{itemize}
+    \item Software and hardware vendors
+    \item Operating system and application security advisories
+    \item Vulnerability databases
+    \item Security monitoring services
+    \item Internal vulnerability scans
+    \item Penetration tests and security assessments
+    \item Incident investigations
+    \item Managed service providers and security partners
+\end{itemize}
+
+Administrators and system owners \must{} monitor for vulnerabilities affecting systems under their responsibility.
+
+Vulnerability scans \should{} be performed periodically on internal and externally accessible systems. Internet-facing systems \should{} be scanned more frequently based on their exposure and risk.
+
+\subsection{Vulnerability Assessment}
+
+Identified vulnerabilities \must{} be evaluated according to their severity, exploitability, affected assets, exposure, data sensitivity, and potential business impact.
+
+The assessment \should{} consider:
+\begin{itemize}
+    \item The severity assigned by the vendor or vulnerability source
+    \item Whether the vulnerability is actively being exploited
+    \item Whether public exploit code is available
+    \item Whether the affected system is accessible from the Internet
+    \item The sensitivity and criticality of the affected system
+    \item The availability of a patch or other remediation
+    \item Existing compensating controls
+    \item The operational risk of applying the remediation
+\end{itemize}
+
+Vulnerabilities \must{} be prioritized based on risk rather than severity alone.
+
+\subsection{Patch Priorities}
+
+Unless a documented exception is approved, patches and vulnerability remediations \should{} be addressed according to the following priorities:
+\begin{itemize}
+    \item Critical vulnerabilities affecting Internet-facing or mission-critical systems \should{} be remediated as soon as possible.
+    \item High-risk vulnerabilities \should{} be remediated within a defined period based on organizational risk tolerance.
+    \item Medium-risk vulnerabilities \should{} be remediated during the next appropriate maintenance cycle.
+    \item Low-risk vulnerabilities \should{} be addressed through routine maintenance or other planned remediation.
+\end{itemize}
+
+Vulnerabilities known to be actively exploited \must{} receive urgent attention regardless of their original severity rating.
+
+The organization \must{} define target remediation timeframes for each risk level. Missed remediation timeframes \must{} be documented and escalated to the system owner or responsible manager.
+
+\subsection{Patch Testing}
+
+Patches \should{} be tested before deployment when testing is reasonably practicable and the risk of testing is lower than the risk of immediate deployment.
+
+Testing \should{} verify:
+\begin{itemize}
+    \item The system remains operational
+    \item Required applications and services continue to function
+    \item Security controls remain enabled
+    \item Business-critical integrations continue to operate
+    \item Backups and recovery procedures remain available
+\end{itemize}
+
+Testing may be limited or skipped when a vulnerability is actively exploited, the affected system is highly exposed, or the vendor identifies the update as an urgent security fix.
+
+The reason for bypassing normal testing \must{} be documented.
+
+\subsection{Patch Deployment}
+
+Patches \must{} be obtained from approved and trusted sources.
+
+Patches \must{} be applied using approved procedures and tools.
+
+Administrators \must{} verify, where technically practicable, that:
+\begin{itemize}
+    \item The patch is intended for the affected system
+    \item The patch was obtained from an approved source
+    \item The patch installation completed successfully
+    \item The system restarted or completed any required post-installation tasks
+    \item The vulnerability or outdated version is no longer present
+\end{itemize}
+
+Automatic updates \should{} be enabled where they are supported and appropriate for the system.
+
+Security updates \must{} not be permanently deferred merely for convenience or to avoid routine maintenance.
+
+\subsection{Emergency Remediation}
+
+Emergency remediation may include expedited patching, temporary isolation, disabling an affected service, restricting network access, applying a vendor workaround, or taking the affected system offline.
+
+Emergency remediation \must{} be considered when:
+\begin{itemize}
+    \item A vulnerability is actively exploited
+    \item A critical system is exposed to an untrusted network
+    \item Sensitive information may be accessed through the vulnerability
+    \item Exploit code is publicly available
+    \item No acceptable compensating control is available
+\end{itemize}
+
+Emergency actions \must{} be documented and reviewed after implementation.
+
+\subsection{Verification and Reporting}
+
+Patch and vulnerability remediation \must{} be verified after deployment.
+
+Verification may include:
+\begin{itemize}
+    \item Reviewing patch-management reports
+    \item Checking installed software and firmware versions
+    \item Performing follow-up vulnerability scans
+    \item Reviewing system logs
+    \item Confirming that required services remain operational
+    \item Obtaining confirmation from the system owner
+\end{itemize}
+
+Patch and vulnerability-management records \must{} identify the affected asset, vulnerability or update, risk rating, remediation action, responsible person, date identified, date remediated, and verification result.
+
+Management \should{} receive periodic reports showing outstanding vulnerabilities, overdue patches, unsupported systems, and significant remediation risks.
+
+\subsection{Exceptions and Compensating Controls}
+
+A patch or vulnerability that cannot be remediated within the required timeframe \must{} have a documented exception.
+
+The exception record \must{} include:
+\begin{itemize}
+    \item The affected system and vulnerability
+    \item The reason remediation cannot be completed
+    \item The risks involved
+    \item Compensating controls
+    \item The responsible system owner
+    \item The approving authority
+    \item The planned remediation date
+    \item The expiration or review date
+\end{itemize}
+
+Compensating controls may include network isolation, access restrictions, application allowlisting, additional monitoring, disabling vulnerable functionality, or increased logging.
+
+Exceptions \must{} be reviewed periodically and closed when remediation is completed or the affected system is retired.

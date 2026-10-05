@@ -1,0 +1,222 @@
+\subsection{Purpose}
+
+Account and access-management procedures ensure that access to systems, applications, networks, devices, and data is limited to authorized users and services based on business need.
+
+Access \must{} be granted, used, reviewed, modified, and removed in a controlled and documented manner.
+
+\subsection{Account Requirements}
+
+Each person \must{} use an individually assigned account for normal system and application access.
+
+Individual accounts \must{} be used to support accountability, auditing, access review, and incident investigation.
+
+Accounts \must{} be associated with a responsible person, role, service, or system.
+
+Accounts \must{} have an owner and a defined purpose. Unowned, unidentified, or unnecessary accounts \must{} be disabled or removed.
+
+Users \mustnot{} share passwords, authentication devices, recovery codes, API keys, or other authentication information.
+
+Shared accounts \should{} not be used. When a shared account is required for technical or operational reasons:
+\begin{itemize}
+    \item The account \must{} have a documented business purpose
+    \item Use of the account \must{} be approved by the system owner
+    \item Access \must{} be limited to authorized personnel
+    \item Activity \must{} be logged where technically practicable
+    \item The account credentials \must{} be changed when an authorized user leaves the role
+    \item The account \must{} be reviewed periodically
+\end{itemize}
+
+\subsection{Access Requests and Approval}
+
+Access \must{} be approved before it is provided.
+
+Access requests \must{} identify:
+\begin{itemize}
+    \item The person or service requesting access
+    \item The system, application, network, or data requested
+    \item The requested role or permission level
+    \item The business purpose
+    \item The requested start date and, where applicable, end date
+    \item The approving manager or system owner
+\end{itemize}
+
+Access \must{} be based on the principles of least privilege and need to know.
+
+Users \must{} receive only the access required to perform their assigned duties.
+
+Access to sensitive, critical, administrative, or financial systems \must{} require approval from the appropriate system or data owner.
+
+High-risk access \should{} require approval from more than one authorized person where separation of duties is reasonably practicable.
+
+\subsection{Privileged Access}
+
+Privileged access includes administrative, root, domain, database, cloud-management, security-management, and other access capable of changing system configurations, permissions, security controls, or sensitive data.
+
+Privileged access \must{} be restricted to authorized administrators and other personnel with a documented business requirement.
+
+Administrators \must{} use separate privileged accounts for administrative activities and ordinary accounts for routine work.
+
+Privileged accounts \mustnot{} be used for routine email, web browsing, or other ordinary user activities unless technically necessary and approved.
+
+Privileged access \should{} use multifactor authentication and approved secure management methods.
+
+Privileged access \must{} be logged where technically practicable. Administrative logs \must{} record enough information to identify the account, action, affected system, and date and time.
+
+Privileged access \must{} be reviewed periodically and after changes in responsibilities.
+
+\subsection{Authentication}
+
+Systems must use approved authentication controls appropriate to the sensitivity and risk of the system.
+
+Multifactor authentication \must{} be enabled for:
+\begin{itemize}
+    \item Administrative and privileged accounts
+    \item Remote access
+    \item Cloud-management interfaces
+    \item Access to sensitive or regulated information
+    \item Systems where multifactor authentication is supported and required by the system owner
+\end{itemize}
+
+Authentication credentials \must{} be protected from unauthorized disclosure.
+
+Passwords \must{} comply with the password-management requirements in this document.
+
+Systems \should{} prevent the reuse of recently used passwords, limit repeated failed authentication attempts, and require reauthentication after an appropriate period of inactivity.
+
+Recovery codes, backup authentication methods, and emergency credentials \must{} be protected to the same extent as passwords.
+
+\subsection{Account Provisioning}
+
+New accounts \must{} be created only after the required approval has been obtained.
+
+Before an account is created, the administrator \should{} verify:
+\begin{itemize}
+    \item The user's identity or service ownership
+    \item The business purpose
+    \item The requested access level
+    \item The approving authority
+    \item Any start date, expiration date, or access limitations
+\end{itemize}
+
+Accounts for temporary workers, contractors, vendors, interns, and other non-permanent users \must{} have an expiration date or scheduled review date.
+
+Service accounts \must{} have a documented owner, purpose, required permissions, and credential-management method.
+
+Service accounts \mustnot{} be used for interactive logins unless technically required and approved.
+
+\subsection{Changes to Access}
+
+Changes to a user's role, responsibilities, employment status, contract, or system assignment \must{} result in a review of that user's access.
+
+Access that is no longer required \must{} be removed promptly.
+
+Administrators \must{} not increase permissions merely to resolve an operational issue without documenting and approving the change.
+
+Temporary elevated access \must{} have a defined duration and \must{} be removed when the approved period ends.
+
+\subsection{Account Termination}
+
+User access \must{} be disabled or removed when employment, contract, volunteer service, or other authorization ends.
+
+Termination procedures \must{} address, as applicable:
+\begin{itemize}
+    \item Network and application accounts
+    \item Privileged and administrative accounts
+    \item Remote-access accounts
+    \item Email and collaboration accounts
+    \item Cloud and vendor accounts
+    \item Physical access credentials
+    \item Company-owned devices
+    \item Tokens, keys, certificates, and authentication devices
+    \item Shared-account passwords known to the departing person
+\end{itemize}
+
+For planned terminations, access removal \must{} occur no later than the end of the person's authorization.
+
+For urgent or involuntary terminations, access \must{} be removed or suspended immediately when directed by authorized management.
+
+\subsection{Access Reviews}
+
+Access rights \must{} be reviewed periodically by the appropriate manager, system owner, or data owner.
+
+Access reviews \should{} confirm:
+\begin{itemize}
+    \item The user or service still requires access
+    \item The assigned permissions are appropriate
+    \item Privileged access remains necessary
+    \item Former users and inactive accounts have been removed
+    \item Temporary access has expired
+    \item Service accounts have current owners
+    \item Shared accounts remain necessary and controlled
+\end{itemize}
+
+Critical systems, privileged accounts, and access to sensitive information \should{} be reviewed at least quarterly.
+
+Other accounts and access rights \should{} be reviewed at least annually or more frequently based on risk.
+
+Review results \must{} be documented, including the reviewer, date, systems reviewed, identified issues, and corrective actions.
+
+\subsection{Inactive and Dormant Accounts}
+
+Accounts that are no longer required \must{} be disabled or removed.
+
+Accounts that have not been used for a defined period \should{} be disabled automatically where technically practicable.
+
+Dormant accounts \must{} be reviewed before being reactivated.
+
+Default, test, demonstration, and guest accounts \must{} be disabled or removed unless there is a documented business requirement.
+
+\subsection{Emergency and Break-Glass Accounts}
+
+Emergency or break-glass accounts may be used only when normal administrative access is unavailable or insufficient to respond to an urgent operational or security need.
+
+Emergency accounts \must{}:
+\begin{itemize}
+    \item Have a documented purpose and owner
+    \item Be protected using strong credentials
+    \item Be restricted to authorized personnel
+    \item Be monitored and logged where technically practicable
+    \item Be tested periodically
+    \item Be reviewed after every use
+    \item Have their credentials changed after use when appropriate
+\end{itemize}
+
+Use of an emergency account \must{} be documented, including the reason, user, time, actions performed, and outcome.
+
+\subsection{Third-Party Access}
+
+Third-party access \must{} be approved before it is enabled.
+
+Third-party access \must{} be limited to:
+\begin{itemize}
+    \item The systems and data required for the approved work
+    \item The minimum permissions required
+    \item The approved time period
+    \item Approved connection methods
+\end{itemize}
+
+Third-party access \must{} use individual accounts where technically practicable.
+
+Vendor and contractor accounts \must{} be disabled or removed when the work is complete or the relationship ends.
+
+Third-party access \must{} be reviewed periodically and after significant changes to the contract, service, system, or risk.
+
+\subsection{Account and Access Records}
+
+Account and access records \must{} be maintained for systems that require formal access management.
+
+Records \should{} include:
+\begin{itemize}
+    \item Account name and type
+    \item Account owner
+    \item User, service, or vendor associated with the account
+    \item System or application
+    \item Assigned role and permissions
+    \item Approval information
+    \item Creation date
+    \item Expiration or review date
+    \item Last access review
+    \item Account status
+\end{itemize}
+
+Access records \must{} be protected from unauthorized modification and disclosure.

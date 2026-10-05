@@ -1,0 +1,93 @@
+\subsection{Risk assessment matrix}
+
+Risk \must{} be assessed using the likelihood and consequence scales in Tables~\ref{tab:likelihood} and~\ref{tab:consequence}. The risk score \must{} be calculated by multiplying the likelihood score by the consequence score.
+
+\subsubsection{Likelihood scale}
+
+The likelihood scale is defined as follows.
+
+\begin{table}[H]
+\centering
+\caption{Likelihood scale}
+\label{tab:likelihood}
+\begin{tabular}{p{0.12\textwidth} p{0.25\textwidth} p{0.48\textwidth}}
+\hline
+\textbf{Score} & \textbf{Rating} & \textbf{Description} \\
+\hline
+1 & Rare & The event is unlikely to occur during the task or project. \\
+2 & Unlikely & The event could occur, but is not expected under normal conditions. \\
+3 & Possible & The event may occur at some time during the task or project. \\
+4 & Likely & The event is expected to occur in some circumstances. \\
+5 & Almost certain & The event is expected to occur frequently or repeatedly. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Consequence scale}
+
+The consequence scale is defined as follows.
+
+\begin{table}[H]
+\centering
+\caption{Consequence scale}
+\label{tab:consequence}
+\begin{tabular}{p{0.12\textwidth} p{0.25\textwidth} p{0.48\textwidth}}
+\hline
+\textbf{Score} & \textbf{Rating} & \textbf{Description} \\
+\hline
+1 & Insignificant & No injury, negligible damage, and no significant disruption. \\
+2 & Minor & Minor injury or illness, minor damage, or short-term disruption. \\
+3 & Moderate & Medical treatment, significant damage, or disruption requiring management. \\
+4 & Major & Serious injury or illness, major damage, or extended disruption. \\
+5 & Catastrophic & Fatality, permanent disabling injury, multiple serious injuries, or major loss. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{The Matrix}
+
+The consequence scale and likelihood scale then gives the matrix.
+
+\begin{table}[H]
+\centering
+\caption{Risk matrix}
+\label{tab:risk-matrix}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{c|ccccc}
+\textbf{Risk Matrix}
+&
+\textbf{1 Insignificant}
+&
+\textbf{2 Minor}
+&
+\textbf{3 Moderate}
+&
+\textbf{4 Major}
+&
+\textbf{5 Catastrophic}
+\\
+\hline
+\textbf{1 Rare} & 1 & 2 & 3 & 4 & 5 \\
+\textbf{2 Unlikely} & 2 & 4 & 6 & 8 & 10 \\
+\textbf{3 Possible} & 3 & 6 & 9 & 12 & 15 \\
+\textbf{4 Likely} & 4 & 8 & 12 & 16 & 20 \\
+\textbf{5 Almost certain} & 5 & 10 & 15 & 20 & 25 \\
+\hline
+\multicolumn{6}{c}{\textbf{Consequence score}} \\
+\end{tabular}
+\end{table}
+
+
+\begin{description}
+    \item[1--4: Low] The task may proceed with routine controls and normal supervision.
+
+    \item[5--9: Moderate] Additional controls \should{} be considered. The responsible person \must{} confirm that the risk is adequately controlled before work begins.
+
+    \item[10--16: High] Additional controls \must{} be implemented before the task begins. Approval by the responsible supervisor \must{} be obtained.
+
+    \item[17--25: Extreme] The task \mustnot{} begin or continue until the risk has been reduced to an acceptable level and formally approved by the appropriate authority.
+\end{description}
+
+The risk assessment \must{} record both the initial risk and the residual risk after controls have been applied. A lower residual score \must{} not be claimed unless the additional controls are actually implemented and verified.
+
+Where a risk cannot be reduced to an acceptable level, the task \must{} be stopped and escalated to the responsible supervisor or safety authority.

@@ -1,448 +1,253 @@
-\documentclass[11pt,a4paper]{article}
+I am in latex. this is in my preamble file:
+\newcommand{\must}{\textbf{MUST}}
+\newcommand{\mustnot}{\textbf{MUST NOT}}
+\newcommand{\should}{\textbf{SHOULD}}
+\newcommand{\shouldnot}{\textbf{SHOULD NOT}}
+\newcommand{\may}{\textbf{MAY}}
+\newcommand{\donot}{\textbf{DO NOT}}
 
-\usepackage[margin=25mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{microtype}
-\usepackage{enumitem}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{xcolor}
-\usepackage{hyperref}
-\usepackage{listings}
-\usepackage{booktabs}
+I am building a document and will be using these headings:
+%This part defines the coding and design requirements for Python source code.
 
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    urlcolor=blue,
-    citecolor=blue
-}
+\section{Scope and Responsibilities}
+\input{computerStanderds/compScopeResposibilites.tex}
 
-\definecolor{codegray}{gray}{0.95}
+\section{Asset inventory}
+%\input{computerStanderds/}
 
-\lstset{
-    backgroundcolor=\color{codegray},
-    basicstyle=\ttfamily\small,
-    frame=single,
-    breaklines=true,
-    columns=fullflexible,
-    showstringspaces=false
-}
+\section{Software inventory}
+%\input{computerStanderds/}
 
-\title{Software Design and Coding Standard}
-\author{Project Name}
-\date{\today}
+\section{Secure configuration}
+%\input{computerStanderds/}
 
-\begin{document}
+\section{Account and access management}
+%\input{computerStanderds/}
 
-\maketitle
-\tableofcontents
-\newpage
+\section{Password and secret storage}
+%\input{computerStanderds/}
 
-\section{Purpose}
+\section{Password Management}
+\input{computerStanderds/passwordSec.tex}
 
-This document defines the design, implementation, testing, and review
-requirements for software written in C and Python.
+\section{Patch and vulnerability management}
+%\input{computerStanderds/}
 
-The objectives are:
+\section{Backups and restoration}
+\input{computerStanderds/backups.tex}
 
+\section{Network management}
+%\input{computerStanderds/}
+
+\section{Logging and monitoring}
+%\input{computerStanderds/}
+
+\section{Malware and endpoint protection}
+%\input{computerStanderds/}
+
+\section{Change management}
+%\input{computerStanderds/}
+
+\section{Incident response}
+%\input{computerStanderds/}
+
+\section{Business continuity and disaster recovery}
+%\input{computerStanderds/}
+
+\section{Data classification and encryption}
+%\input{computerStanderds/}
+
+\section{Vendor and cloud management}
+%\input{computerStanderds/}
+
+\section{Physical security}
+%\input{computerStanderds/}
+
+\section{System decommissioning}
+%\input{computerStanderds/}
+
+\section{Review, testing, and exceptions}
+%\input{computerStanderds/}
+
+scope holds:
+\subsection{Purpose}
+
+This document defines the minimum procedures and controls for managing the organization's computer systems, networks, applications, accounts, data, backups, and related infrastructure.
+
+The purpose of these procedures is to:
 \begin{itemize}
-    \item correctness;
-    \item safety;
-    \item readability;
-    \item maintainability;
-    \item portability;
-    \item testability;
-    \item predictable resource usage;
-    \item support for static analysis and code review.
+    \item Protect the confidentiality, integrity, and availability of user systems and data
+    \item Reduce the likelihood and impact of security incidents
+    \item Ensure that systems are maintained, monitored, backed up, and recoverable
+    \item Establish clear ownership and accountability for technology resources
+    \item Provide consistent procedures for administration, maintenance, change, and retirement
 \end{itemize}
 
-\section{Scope}
+\subsection{Scope}
 
-This standard applies to:
-
-\begin{itemize}
-    \item production C source code;
-    \item production Python source code;
-    \item unit tests and integration tests;
-    \item build scripts and automation;
-    \item public interfaces and internal modules;
-    \item documentation and code review.
-\end{itemize}
-
-Generated code, third-party code, and legacy code may be exempted,
-but each exemption shall be documented.
-
-\section{Normative Language}
-
-The terms \textbf{MUST}, \textbf{MUST NOT}, \textbf{SHOULD},
-\textbf{SHOULD NOT}, and \textbf{MAY} are normative.
-
-\begin{description}
-    \item[MUST] An absolute requirement.
-    \item[SHOULD] A recommendation that may be overridden with justification.
-    \item[MAY] An optional practice.
-\end{description}
-
-\section{Standards and References}
-
-This project is based on the following sources:
+These procedures apply to all systems and technology resources owned, operated, managed, or used on behalf of the user, including:
 
 \begin{itemize}
-    \item NASA/JPL ``Power of 10'' rules for safety-critical C;
-    \item Scilab C programming conventions;
-    \item MaJerle C coding style;
-    \item Essential C coding standards from BestHub;
-    \item PEP 8;
-    \item Black, Ruff, isort, and mypy conventions for Python.
+    \item Servers, workstations, laptops, and mobile devices
+    \item Virtual machines, containers, hypervisors, and cloud resources
+    \item Firewalls, routers, switches, wireless systems, VPNs, and other network equipment
+    \item Operating systems, applications, databases, and directory services
+    \item Email, file storage, collaboration, and hosted services
+    \item User accounts, administrator accounts, service accounts, and emergency accounts
+    \item user data, backup data, encryption keys, and recovery information
+    \item Removable media and equipment used to access user systems
+    \item Third-party systems that store, process, or transmit user data
 \end{itemize}
 
-Where these sources conflict, this document takes precedence.
+These procedures apply any employees, contractors, temporary workers, volunteers, interns, consultants, vendors, and any other person who is authorized to access users systems.
 
-\section{Project Rule Precedence}
+Systems that cannot comply with a requirement \must{} be documented and approved as an exception. 
 
-The following precedence order shall be used:
+The exception record \must{} identify the affected system, the reason for non-compliance, the risks involved, compensating controls, responsible owner, approval, and expiration or review date.
 
-\begin{enumerate}
-    \item safety and system requirements;
-    \item project architecture and interface requirements;
-    \item NASA/JPL safety rules for applicable C code;
-    \item C11 and Python language requirements;
-    \item formatting and naming rules;
-    \item local implementation preferences.
-\end{enumerate}
+\subsection{Management Responsibilities}
 
-Any deviation from a mandatory rule requires a documented exception.
+Management is responsible for providing the authority, resources, and personnel required to operate systems securely.
 
-\section{General Design Principles}
+Management \must{}:
+\begin{itemize}
+    \item Approve these procedures and significant changes to them
+    \item Assign owners for systems, applications, data, and processes
+    \item Ensure that identified risks are addressed or formally accepted
+    \item Ensure that personnel receive appropriate training
+    \item Support incident response and disaster recovery activities
+    \item Ensure that critical systems have documented recovery priorities
+    \item Review unresolved security, availability, and compliance issues
+\end{itemize}
+
+Management \mustnot{} require personnel to bypass security controls merely for convenience or to meet an operational deadline without documenting and approving the associated risk.
+
+\subsection{System and Service Owners}
+
+Each system, application, service, and significant data collection \must{} have a designated owner. The owner may delegate technical work but retains responsibility for the system's business purpose and risk.
+
+System and service owners \must{}:
+\begin{itemize}
+    \item Define the purpose and criticality of the system
+    \item Identify the data stored, processed, or transmitted
+    \item Approve authorized users and access levels
+    \item Ensure that the system is included in the asset inventory
+    \item Define backup, retention, recovery, and availability requirements
+    \item Approve significant configuration and access changes
+    \item Review access and system status periodically
+    \item Ensure that unsupported or obsolete systems are replaced, isolated, or retired
+    \item Participate in recovery tests and incident investigations
+\end{itemize}
+
+A system owner \must{} notify the appropriate administrator when a system's purpose, data, users, dependencies, or risk changes.
+
+\subsection{System Administrators}
+
+System administrators are responsible for the technical operation and maintenance of assigned systems.
+
+Administrators \must{}:
+\begin{itemize}
+    \item Use individual administrator accounts
+    \item Follow least-privilege and separation-of-duty requirements
+    \item Maintain secure configurations
+    \item Apply approved patches and updates
+    \item Monitor system health, capacity, and security alerts
+    \item Verify that backups are running and report failures
+    \item Document significant changes and maintenance
+    \item Protect credentials, keys, and administrative information
+    \item Maintain current system documentation
+    \item Report suspected compromise, data loss, or control failure promptly
+\end{itemize}
+
+Administrators \mustnot{} use administrative accounts for routine email, web browsing, or other ordinary user activities unless technically necessary and approved.
+
+Administrative actions \should{} be logged. Logs \mustnot{} contain passwords, private keys, recovery secrets, or other sensitive credential values.
+
+\subsection{Users}
+
+Users are responsible for protecting the accounts, devices, and information assigned to them.
+
+Users \must{}:
+\begin{itemize}
+    \item Use only their own accounts unless an approved shared account is required
+    \item Protect passwords, MFA devices, recovery codes, and other authentication information
+    \item Lock or log out of devices when they are unattended
+    \item Use user systems only for authorized purposes
+    \item Protect user data from unauthorized access or disclosure
+    \item Report suspected phishing, malware, lost devices, unauthorized access, or accidental disclosure promptly
+    \item Follow approved procedures for storing, transmitting, and disposing of user information
+\end{itemize}
+
+Users \mustnot{} install unauthorized software, disable security controls, share credentials, or connect unknown devices to user networks.
+
+\subsection{Information and Data Owners}
+
+Data owners are responsible for determining how information should be protected throughout its lifecycle.
+
+Data owners \must{}:
+\begin{itemize}
+    \item Classify information according to its sensitivity
+    \item Approve access based on business need
+    \item Define retention and disposal requirements
+    \item Identify backup and recovery requirements
+    \item Review access periodically
+    \item Report changes in legal, contractual, or business requirements
+\end{itemize}
+
+Data owners \should{} work with system owners and administrators to ensure that technical controls match the sensitivity and importance of the data.
+
+\subsection{Security and Privacy Responsibilities}
+
+The person or team responsible for security oversight \should{}:
 
 \begin{itemize}
-    \item Each module shall have one clearly defined responsibility.
-    \item Interfaces shall be explicit and minimal.
-    \item Mutable global state shall be avoided.
-    \item Functions shall perform one primary task.
-    \item Resource ownership shall be documented.
-    \item Error conditions shall be handled explicitly.
-    \item Correctness shall be established before optimization.
-    \item Code shall be easy to test independently.
-    \item Complexity shall be kept low enough for human review.
+    \item Maintain security policies and procedures
+    \item Coordinate risk assessments and security reviews
+    \item Review security alerts and reported incidents
+    \item Coordinate incident response
+    \item Track exceptions and corrective actions
+    \item Provide security awareness training
+    \item Review the effectiveness of security controls
 \end{itemize}
 
-\section{C Coding Standard}
+Security responsibilities may be assigned to an administrator or manager in a small organization, but the assignment \must{} be documented.
+A person should not approve their own high-risk access or changes where separation of duties is reasonably practicable.
 
-\subsection{Language Version}
+\subsection{Third-Party Responsibilities}
 
-New C code shall use C11 unless the target platform requires an
-earlier standard.
-
-The compiler shall operate in a strict conformance mode where practical.
-
-\subsection{Formatting}
-
+Vendors and contractors with access to user systems or data \must{}:
 \begin{itemize}
-    \item Four spaces shall be used for indentation.
-    \item Tabs shall not be used.
-    \item Lines shall not contain trailing whitespace.
-    \item Braces shall always be used, including for single statements.
-    \item A consistent brace style shall be used throughout the project.
-    \item The project shall use one formatter configuration.
+    \item Use only approved accounts and access methods
+    \item Protect user information from unauthorized disclosure
+    \item Follow applicable security and change-management procedures
+    \item Use MFA where supported or required
+    \item Report suspected incidents promptly
+    \item Return or securely delete user information when access ends
 \end{itemize}
 
-This project adopts same-line braces because they are compatible with the
-selected MaJerle style and common automated formatting tools.
+Third-party access \must{} be limited to the required systems, time period, and permissions. Access \must{} be reviewed and removed when the work is complete or the relationship ends.
 
-\begin{lstlisting}[language=C]
-if (condition) {
-    perform_action();
-} else {
-    perform_alternative();
-}
-\end{lstlisting}
+\subsection{Responsibility Assignment}
 
-\subsection{Naming}
-
+Responsibilities for critical systems and processes \must{} be assigned to named roles or individuals. The user \should{} maintain a responsibility register containing:
 \begin{itemize}
-    \item Functions and variables shall use lowercase snake case.
-    \item Types shall use lowercase snake case with a project-approved suffix.
-    \item Constants and macros shall use uppercase snake case.
-    \item Names shall describe their purpose.
-    \item Reserved identifiers beginning with double underscores shall not be used.
-    \item Single-letter names shall be avoided except for short local indices.
+    \item System or process name
+    \item Business owner
+    \item Technical owner
+    \item Primary administrator
+    \item Backup administrator
+    \item Data classification
+    \item Recovery priority
+    \item Vendor or support contact, if applicable
+    \item Last review date
 \end{itemize}
 
-\begin{lstlisting}[language=C]
-uint32_t packet_length;
-static int32_t calculate_checksum(void);
-#define MAX_PACKET_LENGTH 1024
-\end{lstlisting}
+No critical system \should{} depend on only one person's knowledge or availability. At least one trained backup administrator \should{} be identified for each critical system.
 
-\subsection{Functions}
+\subsection{Review and Enforcement}
 
-\begin{itemize}
-    \item Functions shall perform one logical task.
-    \item Functions should normally contain no more than 50--60 lines.
-    \item Function nesting should not exceed four levels.
-    \item Internal functions shall be declared \texttt{static}.
-    \item Functions with no parameters shall use \texttt{(void)}.
-    \item Public functions shall have declarations in a header file.
-    \item Parameters shall be validated by the called function.
-    \item Return values shall be checked by the calling function.
-    \item Function contracts shall be documented using Doxygen.
-\end{itemize}
+These procedures \should{} be reviewed at least annually and whenever there is a significant change to systems, personnel, business operations, legal requirements, or security risks.
 
-\begin{lstlisting}[language=C]
-/**
- * @brief Calculates the checksum of a byte buffer.
- *
- * @param data Input buffer.
- * @param length Number of bytes in the buffer.
- * @return Calculated checksum.
- */
-uint32_t calculate_checksum(const uint8_t *data, size_t length);
-\end{lstlisting}
+Violations \must{} be reported to management or the designated security contact. Corrective action may include additional training, removal of access, disciplinary action, technical remediation, or other measures appropriate to the risk and circumstances.
 
-\subsection{NASA/JPL Power of 10 Rules}
-
-For safety-critical C modules:
-
-\begin{enumerate}
-    \item Do not use \texttt{goto}, \texttt{setjmp}, or \texttt{longjmp}.
-    \item Do not use direct or indirect recursion.
-    \item Every loop shall have a statically reviewable upper bound.
-    \item Dynamic memory allocation shall not occur after initialization.
-    \item Functions shall remain short and reviewable.
-    \item Data shall be declared at the smallest practical scope.
-    \item Non-void return values shall always be checked.
-    \item Function parameters shall be validated.
-    \item Preprocessor use shall be limited.
-    \item Pointer use shall be restricted and documented.
-    \item Function pointers shall not be used unless specifically approved.
-    \item Compiler warnings shall be treated as errors.
-    \item Static analysis shall produce no unresolved warnings.
-    \item Assertions shall be used to detect impossible states.
-\end{enumerate}
-
-The original Power of 10 rules were developed for C code where static
-analysis, bounded resource use, and reviewability are important. They
-should therefore be marked as ``applicable'' or ``not applicable'' for
-each module rather than applied blindly to every program. <citation src="1"></citation>
-
-\subsection{Memory Management}
-
-\begin{itemize}
-    \item Memory ownership shall be documented.
-    \item Every allocation shall have one clearly identified owner.
-    \item Every allocated object shall have a defined release path.
-    \item Use-after-free and double-free behavior shall be prevented.
-    \item Variable-length arrays shall not be used.
-    \item Safety-critical modules shall not allocate memory after startup.
-    \item Allocation failures shall be handled explicitly.
-\end{itemize}
-
-\subsection{Pointers}
-
-\begin{itemize}
-    \item Pointers shall be checked before dereferencing unless validity is
-          guaranteed by construction.
-    \item Pointer depth should normally be limited to one level.
-    \item Pointer ownership and lifetime shall be documented.
-    \item \texttt{const} shall be used whenever data is not modified.
-    \item Pointer arithmetic shall be minimized and reviewed carefully.
-\end{itemize}
-
-\subsection{Preprocessor}
-
-\begin{itemize}
-    \item Header guards shall be used.
-    \item Function-like macros shall be avoided when an inline function is
-          practical.
-    \item Macro arguments shall be parenthesized.
-    \item Multi-statement macros shall use \texttt{do \{ \} while (0)}.
-    \item Conditional compilation shall be limited to configuration and
-          platform-specific code.
-\end{itemize}
-
-\subsection{Headers}
-
-\begin{itemize}
-    \item Headers shall contain declarations and interface definitions.
-    \item Headers shall not define ordinary global variables.
-    \item Headers shall be self-contained.
-    \item Unused includes shall be removed.
-    \item Circular header dependencies are prohibited.
-    \item Standard headers shall use angle brackets.
-    \item Project headers shall use quotation marks.
-\end{itemize}
-
-\section{Python Coding Standard}
-
-\subsection{Formatting}
-
-\begin{itemize}
-    \item Python code shall follow PEP 8.
-    \item Four spaces shall be used for indentation.
-    \item Tabs shall not be used.
-    \item The maximum line length shall be 88 characters.
-    \item Black shall be used for formatting.
-    \item Ruff shall be used for linting.
-    \item isort shall be used for import ordering.
-\end{itemize}
-
-\subsection{Naming}
-
-\begin{itemize}
-    \item Functions, variables, and modules shall use \texttt{snake\_case}.
-    \item Classes shall use \texttt{CamelCase}.
-    \item Constants shall use \texttt{UPPER\_CASE}.
-    \item Private implementation details may use a leading underscore.
-    \item Names shall be descriptive and unambiguous.
-\end{itemize}
-
-\subsection{Imports}
-
-Imports shall be grouped in this order:
-
-\begin{enumerate}
-    \item standard library;
-    \item third-party packages;
-    \item local project packages.
-\end{enumerate}
-
-Wildcard imports are prohibited.
-
-\begin{lstlisting}[language=Python]
-import json
-from pathlib import Path
-
-import requests
-
-from project.configuration import Settings
-\end{lstlisting}
-
-\subsection{Type Hints}
-
-Public functions shall include type hints for parameters and return values.
-
-\begin{lstlisting}[language=Python]
-def calculate_checksum(data: bytes) -> int:
-    """Return the checksum for data."""
-    return sum(data) % 256
-\end{lstlisting}
-
-mypy shall be used for static type checking where practical.
-
-\subsection{Documentation}
-
-Public modules, classes, functions, and methods shall have docstrings.
-Google-style docstrings shall be used consistently.
-
-\subsection{Error Handling}
-
-\begin{itemize}
-    \item Specific exception types shall be used.
-    \item Bare \texttt{except:} clauses are prohibited.
-    \item Exceptions shall be handled at the appropriate abstraction level.
-    \item Exceptions shall not be silently discarded.
-    \item Context managers shall be used for resource management.
-\end{itemize}
-
-\begin{lstlisting}[language=Python]
-with open(file_path, "r", encoding="utf-8") as input_file:
-    contents = input_file.read()
-\end{lstlisting}
-
-\subsection{Testing}
-
-\begin{itemize}
-    \item Unit tests shall be written for new functionality.
-    \item Normal, boundary, and invalid inputs shall be tested.
-    \item Tests shall have descriptive names.
-    \item External dependencies shall be mocked where appropriate.
-    \item Tests shall not depend on execution order.
-\end{itemize}
-
-\section{Testing and Verification}
-
-The project shall use the following verification stages:
-
-\begin{enumerate}
-    \item formatting;
-    \item compilation or syntax checking;
-    \item static analysis;
-    \item unit testing;
-    \item integration testing;
-    \item code review;
-    \item release validation.
-\end{enumerate}
-
-\subsection{C Tooling}
-
-The exact tools shall be selected per target platform, but the minimum
-checks should include:
-
-\begin{itemize}
-    \item compiler warnings at a strict level;
-    \item \texttt{clang-format};
-    \item \texttt{clang-tidy} or another static analyzer;
-    \item AddressSanitizer where supported;
-    \item UndefinedBehaviorSanitizer where supported;
-    \item unit-test execution.
-\end{itemize}
-
-\subsection{Python Tooling}
-
-The minimum Python checks should include:
-
-\begin{itemize}
-    \item Black formatting;
-    \item Ruff linting;
-    \item mypy type checking;
-    \item unit tests using pytest;
-    \item coverage measurement where appropriate.
-\end{itemize}
-
-\section{Exceptions}
-
-An exception shall contain:
-
-\begin{itemize}
-    \item the rule being violated;
-    \item the affected file or module;
-    \item the technical reason;
-    \item the risk introduced;
-    \item the mitigation;
-    \item the approving reviewer;
-    \item an expiration or review date.
-\end{itemize}
-
-\section{Code Review Checklist}
-
-Reviewers shall confirm:
-
-\begin{itemize}
-    \item requirements are traceable to implementation;
-    \item interfaces are clearly defined;
-    \item errors are handled;
-    \item resources are released correctly;
-    \item boundaries and invalid inputs are tested;
-    \item compiler and static-analysis warnings are resolved;
-    \item NASA rules are satisfied for applicable C modules;
-    \item formatting tools produce no changes;
-    \item documentation is accurate;
-    \item the change is appropriately scoped.
-\end{itemize}
-
-\section{Traceability Matrix}
-
-\begin{longtable}{p{0.18\textwidth} p{0.28\textwidth} p{0.22\textwidth} p{0.22\textwidth}}
-\toprule
-Requirement & Implementation & Verification & Status \\
-\midrule
-REQ-001 & Module or function & Unit test & Open \\
-REQ-002 & Interface definition & Integration test & Open \\
-REQ-003 & Error handling & Negative test & Open \\
-\bottomrule
-\end{longtable}
-
-\end{document}
+can you give me a page for:

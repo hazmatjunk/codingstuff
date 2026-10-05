@@ -1,0 +1,174 @@
+\subsection{Purpose}
+
+This section defines requirements for securely retiring, replacing, transferring, or removing systems, applications, accounts, equipment, services, and information.
+
+The purpose is to prevent unauthorized access, data exposure, service disruption, loss of records, and unmanaged dependencies when a system or service is no longer required.
+
+\subsection{Scope}
+
+These requirements apply to:
+\begin{itemize}
+    \item Servers, workstations, laptops, mobile devices, and network equipment
+    \item Virtual machines, containers, cloud resources, and storage volumes
+    \item Applications, databases, websites, and hosted services
+    \item User, administrator, service, vendor, and emergency accounts
+    \item Encryption keys, certificates, API keys, tokens, and credentials
+    \item Backups, logs, documentation, and other associated records
+\end{itemize}
+
+\subsection{Decommissioning Authorization}
+
+A system or service \must{} have an approved decommissioning plan before it is retired or removed.
+
+The plan \must{} identify:
+\begin{itemize}
+    \item The system, service, device, or account being decommissioned
+    \item The business and technical owner
+    \item The reason for decommissioning
+    \item The planned date and responsible personnel
+    \item Dependencies and connected systems
+    \item Information and records that must be retained
+    \item Backup and recovery considerations
+    \item Data sanitization and disposal methods
+    \item Required notifications and approvals
+\end{itemize}
+
+Critical systems \must{} not be decommissioned without approval from the system owner and the appropriate management or technical authority.
+
+\subsection{Dependency Review}
+
+Before decommissioning, the responsible administrator \must{} identify systems, applications, integrations, users, vendors, network connections, scheduled tasks, certificates, credentials, backups, and other dependencies.
+
+The dependency review \should{} include:
+\begin{itemize}
+    \item Applications and services that rely on the system
+    \item Network routes, firewall rules, and integrations
+    \item Data feeds and automated processes
+    \item Monitoring and alerting configurations
+    \item Backup and replication jobs
+    \item DNS records and certificates
+    \item Service accounts and stored credentials
+    \item Documentation and support procedures
+\end{itemize}
+
+Dependencies \must{} be migrated, disabled, or formally accepted before final removal.
+
+\subsection{Data Retention and Transfer}
+
+Information stored on a system \must{} be reviewed before decommissioning.
+
+The system owner \must{} determine whether information should be:
+\begin{itemize}
+    \item Transferred to a replacement system
+    \item Archived according to retention requirements
+    \item Included in an approved backup
+    \item Securely deleted
+    \item Returned to a customer, vendor, or other authorized party
+\end{itemize}
+
+Data \must{} not be retained longer than required unless a documented business, legal, contractual, or regulatory reason exists.
+
+Archived information \must{} remain subject to access control, classification, encryption, retention, monitoring, and disposal requirements.
+
+\subsection{Account and Credential Removal}
+
+Accounts associated with a decommissioned system \must{} be disabled or removed when they are no longer required.
+
+This includes:
+\begin{itemize}
+    \item User accounts
+    \item Administrator accounts
+    \item Service accounts
+    \item Vendor accounts
+    \item Emergency accounts
+    \item API keys and access tokens
+    \item SSH keys and certificates
+    \item Stored passwords and connection credentials
+\end{itemize}
+
+Credentials that may have been exposed during the system's lifecycle \should{} be rotated or revoked.
+
+Network access rules, firewall exceptions, VPN access, remote-management settings, and other access paths \must{} be removed when no longer required.
+
+\subsection{Data Sanitization}
+
+Storage media \must{} be sanitized before equipment is reused, transferred, returned, sold, recycled, or disposed of.
+
+Sanitization methods \must{} be appropriate to the sensitivity of the information and the type of media. Acceptable methods may include:
+\begin{itemize}
+    \item Approved secure erasure
+    \item Cryptographic erasure
+    \item Factory reset combined with secure deletion where appropriate
+    \item Physical destruction
+    \item Destruction by an approved disposal provider
+\end{itemize}
+
+Ordinary file deletion or reformatting \mustnot{} be considered sufficient for Confidential or Restricted information unless the approved sanitization process verifies that the information cannot reasonably be recovered.
+
+\subsection{Hardware and Media Disposal}
+
+Hardware and removable media \must{} be tracked through disposal or transfer.
+
+The disposal record \should{} include:
+\begin{itemize}
+    \item Asset identifier
+    \item Equipment description
+    \item Assigned owner or department
+    \item Date of disposal or transfer
+    \item Sanitization method
+    \item Person or provider performing the work
+    \item Final disposition
+\end{itemize}
+
+Third-party disposal providers \must{} be approved and \should{} provide evidence of secure disposal when required by the data classification or contract.
+
+\subsection{Service and Cloud Decommissioning}
+
+Cloud resources and hosted services \must{} be reviewed before cancellation or deletion.
+
+The review \must{} address:
+\begin{itemize}
+    \item Data stored by the provider
+    \item Snapshots, replicas, and backup copies
+    \item Connected accounts and integrations
+    \item Domains, certificates, and DNS records
+    \item Billing and subscription ownership
+    \item Audit logs and records required for retention
+    \item Provider-specific deletion and recovery procedures
+\end{itemize}
+
+Cloud resources \must{} be deleted or disabled after required data, records, and dependencies have been handled.
+
+\subsection{Verification}
+
+After decommissioning, the responsible administrator \must{} verify that:
+\begin{itemize}
+    \item The system is no longer accessible through approved or known access paths
+    \item Required data has been transferred or archived
+    \item Unneeded data has been securely removed
+    \item Accounts, credentials, keys, and certificates have been disabled or revoked
+    \item Monitoring and backup jobs have been updated
+    \item Network rules and integrations have been removed
+    \item Asset and system inventories are current
+    \item Documentation reflects the final state
+\end{itemize}
+
+Critical system decommissioning \should{} include a second-person review or formal approval of the completion evidence.
+
+\subsection{Emergency Decommissioning}
+
+A system may be isolated or decommissioned without following the normal schedule when necessary to address an active compromise, unacceptable risk, safety issue, legal requirement, or serious operational threat.
+
+Emergency actions \must{} be documented after the immediate risk has been controlled.
+
+The documentation \must{} include the reason for the emergency action, approvals or notifications, data-handling decisions, and follow-up activities.
+
+\subsection{Records}
+
+Decommissioning records \must{} be retained according to applicable business, legal, contractual, and records-management requirements.
+
+The organization \should{} retain evidence of approvals, data transfers, sanitization, disposal, verification, and final inventory updates for critical systems and sensitive information.
+
+\subsection{Review}
+
+Decommissioning procedures \should{} be reviewed at least annually and whenever there is a significant change to technology, service providers, retention requirements, or organizational processes.

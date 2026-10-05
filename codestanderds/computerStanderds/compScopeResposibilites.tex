@@ -1,0 +1,179 @@
+\subsection{Purpose}
+
+This document defines the minimum procedures and controls for managing the organization's computer systems, networks, applications, accounts, data, backups, and related infrastructure.
+
+The purpose of these procedures is to:
+\begin{itemize}
+    \item Protect the confidentiality, integrity, and availability of user systems and data
+    \item Reduce the likelihood and impact of security incidents
+    \item Ensure that systems are maintained, monitored, backed up, and recoverable
+    \item Establish clear ownership and accountability for technology resources
+    \item Provide consistent procedures for administration, maintenance, change, and retirement
+\end{itemize}
+
+\subsection{Scope}
+
+These procedures apply to all systems and technology resources owned, operated, managed, or used on behalf of the user, including:
+
+\begin{itemize}
+    \item Servers, workstations, laptops, and mobile devices
+    \item Virtual machines, containers, hypervisors, and cloud resources
+    \item Firewalls, routers, switches, wireless systems, VPNs, and other network equipment
+    \item Operating systems, applications, databases, and directory services
+    \item Email, file storage, collaboration, and hosted services
+    \item User accounts, administrator accounts, service accounts, and emergency accounts
+    \item user data, backup data, encryption keys, and recovery information
+    \item Removable media and equipment used to access user systems
+    \item Third-party systems that store, process, or transmit user data
+\end{itemize}
+
+These procedures apply any employees, contractors, temporary workers, volunteers, interns, consultants, vendors, and any other person who is authorized to access users systems.
+
+Systems that cannot comply with a requirement \must{} be documented and approved as an exception. 
+
+The exception record \must{} identify the affected system, the reason for non-compliance, the risks involved, compensating controls, responsible owner, approval, and expiration or review date.
+
+\subsection{Management Responsibilities}
+
+Management is responsible for providing the authority, resources, and personnel required to operate systems securely.
+
+Management \must{}:
+\begin{itemize}
+    \item Approve these procedures and significant changes to them
+    \item Assign owners for systems, applications, data, and processes
+    \item Ensure that identified risks are addressed or formally accepted
+    \item Ensure that personnel receive appropriate training
+    \item Support incident response and disaster recovery activities
+    \item Ensure that critical systems have documented recovery priorities
+    \item Review unresolved security, availability, and compliance issues
+\end{itemize}
+
+Management \mustnot{} require personnel to bypass security controls merely for convenience or to meet an operational deadline without documenting and approving the associated risk.
+
+\subsection{System and Service Owners}
+
+Each system, application, service, and significant data collection \must{} have a designated owner. The owner may delegate technical work but retains responsibility for the system's business purpose and risk.
+
+System and service owners \must{}:
+\begin{itemize}
+    \item Define the purpose and criticality of the system
+    \item Identify the data stored, processed, or transmitted
+    \item Approve authorized users and access levels
+    \item Ensure that the system is included in the asset inventory
+    \item Define backup, retention, recovery, and availability requirements
+    \item Approve significant configuration and access changes
+    \item Review access and system status periodically
+    \item Ensure that unsupported or obsolete systems are replaced, isolated, or retired
+    \item Participate in recovery tests and incident investigations
+\end{itemize}
+
+A system owner \must{} notify the appropriate administrator when a system's purpose, data, users, dependencies, or risk changes.
+
+\subsection{System Administrators}
+
+System administrators are responsible for the technical operation and maintenance of assigned systems.
+
+Administrators \must{}:
+\begin{itemize}
+    \item Use individual administrator accounts
+    \item Follow least-privilege and separation-of-duty requirements
+    \item Maintain secure configurations
+    \item Apply approved patches and updates
+    \item Monitor system health, capacity, and security alerts
+    \item Verify that backups are running and report failures
+    \item Document significant changes and maintenance
+    \item Protect credentials, keys, and administrative information
+    \item Maintain current system documentation
+    \item Report suspected compromise, data loss, or control failure promptly
+\end{itemize}
+
+Administrators \mustnot{} use administrative accounts for routine email, web browsing, or other ordinary user activities unless technically necessary and approved.
+
+Administrative actions \should{} be logged. Logs \mustnot{} contain passwords, private keys, recovery secrets, or other sensitive credential values.
+
+\subsection{Users}
+
+Users are responsible for protecting the accounts, devices, and information assigned to them.
+
+Users \must{}:
+\begin{itemize}
+    \item Use only their own accounts unless an approved shared account is required
+    \item Protect passwords, MFA devices, recovery codes, and other authentication information
+    \item Lock or log out of devices when they are unattended
+    \item Use user systems only for authorized purposes
+    \item Protect user data from unauthorized access or disclosure
+    \item Report suspected phishing, malware, lost devices, unauthorized access, or accidental disclosure promptly
+    \item Follow approved procedures for storing, transmitting, and disposing of user information
+\end{itemize}
+
+Users \mustnot{} install unauthorized software, disable security controls, share credentials, or connect unknown devices to user networks.
+
+\subsection{Information and Data Owners}
+
+Data owners are responsible for determining how information should be protected throughout its lifecycle.
+
+Data owners \must{}:
+\begin{itemize}
+    \item Classify information according to its sensitivity
+    \item Approve access based on business need
+    \item Define retention and disposal requirements
+    \item Identify backup and recovery requirements
+    \item Review access periodically
+    \item Report changes in legal, contractual, or business requirements
+\end{itemize}
+
+Data owners \should{} work with system owners and administrators to ensure that technical controls match the sensitivity and importance of the data.
+
+\subsection{Security and Privacy Responsibilities}
+
+The person or team responsible for security oversight \should{}:
+
+\begin{itemize}
+    \item Maintain security policies and procedures
+    \item Coordinate risk assessments and security reviews
+    \item Review security alerts and reported incidents
+    \item Coordinate incident response
+    \item Track exceptions and corrective actions
+    \item Provide security awareness training
+    \item Review the effectiveness of security controls
+\end{itemize}
+
+Security responsibilities may be assigned to an administrator or manager in a small organization, but the assignment \must{} be documented.
+A person should not approve their own high-risk access or changes where separation of duties is reasonably practicable.
+
+\subsection{Third-Party Responsibilities}
+
+Vendors and contractors with access to user systems or data \must{}:
+\begin{itemize}
+    \item Use only approved accounts and access methods
+    \item Protect user information from unauthorized disclosure
+    \item Follow applicable security and change-management procedures
+    \item Use MFA where supported or required
+    \item Report suspected incidents promptly
+    \item Return or securely delete user information when access ends
+\end{itemize}
+
+Third-party access \must{} be limited to the required systems, time period, and permissions. Access \must{} be reviewed and removed when the work is complete or the relationship ends.
+
+\subsection{Responsibility Assignment}
+
+Responsibilities for critical systems and processes \must{} be assigned to named roles or individuals. The user \should{} maintain a responsibility register containing:
+\begin{itemize}
+    \item System or process name
+    \item Business owner
+    \item Technical owner
+    \item Primary administrator
+    \item Backup administrator
+    \item Data classification
+    \item Recovery priority
+    \item Vendor or support contact, if applicable
+    \item Last review date
+\end{itemize}
+
+No critical system \should{} depend on only one person's knowledge or availability. At least one trained backup administrator \should{} be identified for each critical system.
+
+\subsection{Review and Enforcement}
+
+These procedures \should{} be reviewed at least annually and whenever there is a significant change to systems, personnel, business operations, legal requirements, or security risks.
+
+Violations \must{} be reported to management or the designated security contact. Corrective action may include additional training, removal of access, disciplinary action, technical remediation, or other measures appropriate to the risk and circumstances.

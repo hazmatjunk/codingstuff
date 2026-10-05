@@ -1,0 +1,201 @@
+\subsection{Purpose}
+
+The purpose of this section is to establish minimum requirements for designing, configuring, operating, securing, monitoring, and maintaining the organization's network infrastructure.
+
+These requirements are intended to:
+
+\begin{itemize}
+    \item Protect network services and systems from unauthorized access
+    \item Support the confidentiality, integrity, and availability of systems and data
+    \item Ensure that network devices and connections are securely configured and maintained
+    \item Limit network access to authorized users, devices, systems, and services
+    \item Reduce the likelihood and impact of network-based security incidents
+    \item Establish requirements for network segmentation, remote access, wireless access, and firewall management
+    \item Ensure that network changes are authorized, documented, tested, and recoverable
+    \item Support reliable operation, troubleshooting, incident response, and service restoration
+\end{itemize}
+
+Network infrastructure \must{} be managed to protect the confidentiality, integrity, and availability of systems and data. Network devices, services, and connections \must{} have a documented business purpose, designated owner, and appropriate security configuration.
+
+\subsection{Network Inventory and Ownership}
+
+All network infrastructure \must{} be recorded in the asset inventory. This includes firewalls, routers, switches, wireless access points, VPN systems, network appliances, virtual networks, cloud networks, and externally accessible services.
+
+The inventory \should{} include:
+\begin{itemize}
+    \item Device or service name
+    \item Device type and physical or logical location
+    \item Manufacturer, model, and serial number, where applicable
+    \item IP addresses, hostnames, and network segments
+    \item System or service owner
+    \item Technical administrator
+    \item Business purpose
+    \item Internet exposure and external dependencies
+    \item Firmware or operating system version
+    \item Support status and expected replacement date
+    \item Date of the last review
+\end{itemize}
+
+Each significant network segment, connection, firewall, and externally accessible service \must{} have a designated owner.
+
+\subsection{Network Architecture and Segmentation}
+
+Networks \must{} be designed and configured according to business and security requirements. Systems with different levels of trust or sensitivity \should{} be separated using appropriate controls such as VLANs, routing rules, firewalls, security groups, or separate physical networks.
+
+Where technically and operationally appropriate:
+\begin{itemize}
+    \item User workstations \should{} be separated from server and infrastructure networks
+    \item Guest and personal devices \must{} be isolated from internal business systems
+    \item Management interfaces \must{} be restricted to authorized administrators
+    \item Internet-facing systems \must{} be separated from internal networks
+    \item Backup networks and storage \should{} be protected from unauthorized access and routine user traffic
+    \item Development, testing, and production environments \should{} be separated
+    \item Systems handling sensitive information \should{} be placed in appropriately protected network segments
+\end{itemize}
+
+Network access \must{} be denied by default unless it is explicitly required and authorized. Firewall and access-control rules \must{} specify the source, destination, service, purpose, and owner.
+
+\subsection{Firewalls and Access Controls}
+
+Firewalls, routers, wireless systems, VPNs, and other network security devices \must{} use secure configurations.
+
+Network access rules:
+\begin{itemize}
+    \item \must{} be limited to the minimum required protocols, ports, addresses, and users
+    \item \must{} have a documented business or technical purpose
+    \item \must{} be reviewed periodically
+    \item \must{} be removed when no longer required
+    \item \must{} be tested after significant changes
+    \item \should{} include an expiration date for temporary access
+\end{itemize}
+
+Broad rules that allow unrestricted access between networks \should{} be avoided. Rules that permit access from the Internet to internal systems \must{} be specifically approved and protected with appropriate authentication and monitoring.
+
+Administrative access to network devices \must{} use individual administrator accounts where supported. Shared administrative accounts \should{} be avoided and, when required, \must{} be documented and controlled.
+
+\subsection{Wireless Networks}
+
+Wireless networks \must{} use security settings appropriate to the capabilities of the devices and the sensitivity of the information being transmitted.
+
+Wireless networks:
+\begin{itemize}
+    \item \must{} use strong encryption and authentication
+    \item \must{} use separate networks for guests and internal users where guest access is provided
+    \item \must{} restrict administrative access to authorized personnel
+    \item \must{} use a unique administrative password or other appropriate administrative authentication
+    \item \should{} use enterprise authentication where supported
+    \item \mustnot{} use default administrator passwords or default security settings
+\end{itemize}
+
+Guest wireless access \must{} not provide access to internal systems unless the access has been specifically authorized and secured.
+
+\subsection{Remote Access and VPN}
+
+Remote access to internal systems \must{} be authorized, encrypted, and limited to the systems and services required for the approved purpose.
+
+Remote access systems \must{}:
+\begin{itemize}
+    \item Require individual user accounts
+    \item Use MFA where supported
+    \item Use approved encryption protocols
+    \item Enforce access restrictions based on user, device, network, or other appropriate conditions
+    \item Log successful and unsuccessful authentication attempts
+    \item Remove or disable access when it is no longer required
+\end{itemize}
+
+Remote administrative access \must{} be restricted to authorized administrators and \should{} be limited to approved devices and managed network connections. Remote access tools that bypass organizational security controls \mustnot{} be installed or used without approval.
+
+Third-party remote access \must{} be limited to the required systems, time period, and permissions. Temporary access \should{} expire automatically whenever technically possible.
+
+\subsection{Network Device Configuration}
+
+Network devices \must{} be securely configured before being placed into production.
+
+Administrators \must{}:
+\begin{itemize}
+    \item Change default passwords and disable unused default accounts
+    \item Disable unnecessary services, interfaces, and protocols
+    \item Apply approved firmware and security updates
+    \item Use secure management protocols
+    \item Restrict management access to authorized networks or administrator devices
+    \item Synchronize device time with an approved time source
+    \item Save and protect current configurations
+    \item Document significant configuration changes
+    \item Back up configurations when needed for recovery
+\end{itemize}
+
+Insecure protocols such as unencrypted administrative services \mustnot{} be used where a secure alternative is available. Network configuration backups \must{} be protected from unauthorized access because they may contain credentials, keys, addresses, or other sensitive information.
+
+\subsection{Network Changes}
+
+Changes to network infrastructure, firewall rules, routing, wireless configuration, VPN settings, or network security controls \must{} follow the approved change-management process.
+
+A significant network change \must{} include:
+\begin{itemize}
+    \item A description and business purpose
+    \item The affected systems and services
+    \item Security and availability considerations
+    \item Implementation steps
+    \item Testing or validation steps
+    \item A rollback or recovery plan
+    \item The responsible administrator
+    \item Required approval
+    \item The date of implementation
+\end{itemize}
+
+Emergency network changes may be implemented when necessary to protect systems or restore service, but they \must{} be documented and reviewed afterward.
+
+\subsection{Network Availability and Capacity}
+
+Network infrastructure \must{} be monitored and maintained to support required business operations.
+
+Administrators \should{} monitor:
+\begin{itemize}
+    \item Availability and service interruptions
+    \item Bandwidth and utilization
+    \item Capacity and performance
+    \item Hardware and interface errors
+    \item Unusual traffic patterns
+    \item VPN and wireless authentication failures
+    \item Firewall and intrusion-prevention alerts
+    \item Expiring certificates and service credentials
+\end{itemize}
+
+Critical network components \should{} have appropriate redundancy, documented recovery procedures, and tested restoration procedures based on their business importance.
+
+\subsection{Network Security Monitoring}
+
+Network devices and services \must{} generate security and operational logs appropriate to their function. Relevant logs \should{} be forwarded to a centralized logging system where technically and operationally feasible.
+
+Network logs \should{} include:
+\begin{itemize}
+    \item Administrative logins and configuration changes
+    \item Firewall rule changes
+    \item VPN connections and disconnections
+    \item Authentication failures
+    \item Blocked and permitted security events
+    \item Significant routing or interface changes
+    \item Wireless access and authentication events
+    \item Malware, intrusion, or denial-of-service alerts
+\end{itemize}
+
+Network logs \mustnot{} contain passwords, private keys, recovery secrets, or other sensitive credential values.
+
+\subsection{Network Review}
+
+Network infrastructure and access rules \must{} be reviewed periodically and after significant organizational, technical, or security changes.
+
+The review \should{} verify that:
+\begin{itemize}
+    \item Network devices and connections are accurately inventoried
+    \item Owners and administrators are assigned
+    \item Firewall and access-control rules remain necessary
+    \item Unused services, ports, accounts, and connections have been removed
+    \item Remote access remains authorized
+    \item Wireless networks remain appropriately secured
+    \item Firmware and software remain supported
+    \item Network diagrams and documentation are current
+    \item Security and availability issues have been assigned for remediation
+\end{itemize}
+
+Any network component that cannot be securely maintained \must{} be isolated, replaced, or formally approved as an exception.

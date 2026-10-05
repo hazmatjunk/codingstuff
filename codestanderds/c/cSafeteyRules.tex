@@ -1,9 +1,9 @@
-\subsubsection{Applicability}
+\subsection{Applicability}
 
 The rules in this section apply to safety-critical C modules. Each module
 shall identify whether these rules are applicable.
 
-\subsubsection{Control Flow}
+\subsection{Control Flow}
 
 The following constructs are prohibited:
 
@@ -15,7 +15,7 @@ The following constructs are prohibited:
     \item indirect recursion.
 \end{itemize}
 
-\subsubsection{Loops}
+\subsection{Loops}
 
 Every loop shall have a statically reviewable upper bound.
 
@@ -28,14 +28,14 @@ for (size_t index = 0; index < MAX_ITEMS; ++index) {
 Unbounded loops shall not be used in safety-critical modules unless
 explicitly justified and independently monitored.
 
-\subsubsection{Dynamic Memory}
+\subsection{Dynamic Memory}
 
 Dynamic allocation shall not occur after system initialization in
 safety-critical modules.
 
 Allocation failures shall be handled explicitly.
 
-\subsubsection{Return Values}
+\subsection{Return Values}
 
 Return values from non-void functions shall be checked unless the function
 contract explicitly documents that the value may be ignored.

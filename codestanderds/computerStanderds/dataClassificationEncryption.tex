@@ -1,0 +1,147 @@
+\subsection{Purpose}
+
+This section defines requirements for classifying, handling, storing, transmitting, and protecting organizational information. The purpose is to ensure that information receives protection appropriate to its sensitivity, business importance, legal requirements, and potential impact if disclosed, altered, lost, or destroyed.
+
+\subsection{Scope}
+
+These requirements apply to all information created, received, stored, processed, transmitted, or disposed of by the organization, regardless of format or location.
+
+This includes information stored on:
+\begin{itemize}
+    \item Servers, workstations, laptops, and mobile devices
+    \item Cloud services, hosted applications, and virtual systems
+    \item Databases, file shares, email systems, and collaboration platforms
+    \item Backup systems and removable media
+    \item Paper records and printed documents
+    \item Third-party systems used to store or process organizational information
+\end{itemize}
+
+\subsection{Information Classification}
+
+Information \must{} be assigned a classification by the information owner. The classification \must{} be based on the sensitivity of the information and the potential impact of unauthorized disclosure, modification, loss, or destruction.
+
+The organization \should{} use the following classification levels:
+\begin{itemize}
+    \item \textbf{Public}: Information approved for public release and disclosure. Unauthorized modification may still require protection.
+    \item \textbf{Internal}: Information intended for use by authorized personnel and trusted third parties. Unauthorized disclosure may cause limited operational or reputational harm.
+    \item \textbf{Confidential}: Information that requires restricted access because unauthorized disclosure, modification, or loss could cause significant harm.
+    \item \textbf{Restricted}: Highly sensitive information requiring the strongest available safeguards. Examples include authentication secrets, encryption keys, sensitive personal information, payment information, and security investigation data.
+\end{itemize}
+
+Information \must{} be classified at creation or when it is first received. If the classification is uncertain, the information \must{} be handled using the higher classification until the information owner makes a determination.
+
+\subsection{Handling Requirements}
+
+Information \must{} be accessed only by individuals, systems, and services with an authorized business need.
+
+Information owners \must{} define appropriate requirements for:
+\begin{itemize}
+    \item Access authorization
+    \item Storage locations
+    \item Transmission methods
+    \item Sharing with internal and external parties
+    \item Retention periods
+    \item Backup and recovery
+    \item Disposal and destruction
+\end{itemize}
+
+Confidential and Restricted information \mustnot{} be stored in publicly accessible locations or transmitted through unapproved services.
+
+Restricted information \must{} be protected using access controls, encryption, monitoring, and other safeguards appropriate to the risk.
+
+Information \should{} be labeled where practical. Labels may be applied to documents, email messages, database records, file shares, removable media, and other storage locations.
+
+\subsection{Access Control}
+
+Access to Confidential and Restricted information \must{} be granted according to least privilege and business need.
+
+Access permissions \must{}:
+\begin{itemize}
+    \item Be approved by the information owner or delegated authority
+    \item Be assigned to individual accounts whenever possible
+    \item Be reviewed periodically
+    \item Be removed when no longer required
+    \item Be removed or changed when a person's role changes
+    \item Be removed when employment, contract, or authorization ends
+\end{itemize}
+
+Shared accounts \should{} not be used to access Confidential or Restricted information unless technically necessary and formally approved.
+
+\subsection{Encryption}
+
+Confidential and Restricted information \must{} be encrypted when transmitted across untrusted networks.
+
+Restricted information \must{} be encrypted when stored on portable devices, removable media, or systems that are not physically controlled by the organization.
+
+Encryption keys \must{} be protected separately from the information they protect. Encryption keys \mustnot{} be stored in plaintext alongside encrypted data unless the arrangement is specifically designed and approved for key management.
+
+Encryption keys \must{} be:
+\begin{itemize}
+    \item Accessible only to authorized personnel and systems
+    \item Protected against unauthorized modification or disclosure
+    \item Backed up when necessary for recovery
+    \item Rotated or replaced when compromise is suspected
+    \item Retired when no longer required
+\end{itemize}
+
+Passwords, API keys, private keys, recovery codes, and similar authentication values \must{} be stored using approved secret-management methods. They \mustnot{} be stored in source code, ordinary documents, tickets, email, or publicly accessible repositories.
+
+\subsection{Transmission and Sharing}
+
+Confidential and Restricted information \must{} be transmitted only through approved methods.
+
+Before sharing information with a third party, the responsible owner \must{} verify:
+\begin{itemize}
+    \item The recipient is authorized to receive the information
+    \item The recipient requires the information for a legitimate purpose
+    \item The transmission method provides appropriate protection
+    \item Contractual or legal requirements have been addressed
+    \item The information is limited to the minimum necessary
+\end{itemize}
+
+Information sent by email \should{} be encrypted or protected using an approved secure-sharing mechanism when the classification or risk requires it.
+
+Sensitive information \mustnot{} be sent to personal email accounts, unapproved file-sharing services, or unauthorized applications.
+
+\subsection{Backup and Recovery}
+
+Backups containing Confidential or Restricted information \must{} be protected at a level equal to or greater than the original information.
+
+Backups \must{} be subject to:
+\begin{itemize}
+    \item Access restrictions
+    \item Encryption where appropriate
+    \item Retention requirements
+    \item Monitoring and failure reporting
+    \item Periodic recovery testing
+    \item Secure disposal when no longer required
+\end{itemize}
+
+Recovery copies of encryption keys and other secrets \must{} be protected against unauthorized access and loss.
+
+\subsection{Disposal}
+
+Information \must{} be securely disposed of when it is no longer required, subject to legal, contractual, operational, and retention requirements.
+
+Disposal methods \must{} be appropriate to the media and classification. These methods may include:
+\begin{itemize}
+    \item Secure deletion
+    \item Cryptographic erasure
+    \item Physical destruction
+    \item Shredding of paper records
+    \item Sanitization or destruction of removable media
+\end{itemize}
+
+Simply deleting a file or moving it to a recycle bin \mustnot{} be considered sufficient disposal for Confidential or Restricted information unless an approved secure-deletion process is used.
+
+\subsection{Incident Reporting}
+
+Suspected loss, unauthorized access, accidental disclosure, incorrect classification, or compromise of Confidential or Restricted information \must{} be reported promptly according to the incident response procedures.
+
+The report \should{} include the affected information, systems, individuals, time period, suspected cause, and actions already taken.
+
+\subsection{Review}
+
+Information owners \must{} review classifications when the sensitivity, use, legal requirements, business value, or risk associated with information changes.
+
+Classification and encryption requirements \should{} be reviewed at least annually and whenever a significant system, process, vendor, or regulatory change occurs.

@@ -1,4 +1,4 @@
-\subsubsection{General Requirement}
+\subsection{General Requirement}
 
 Code shall not produce:
 
@@ -27,7 +27,7 @@ For maximum saftey general rules include:
     \item cleanup paths tested.
 \end{itemize}
 
-\subsubsection{Allocation Policy}
+\subsection{Allocation Policy}
 
 Static allocation and caller-provided storage are preferred.
 
@@ -43,7 +43,7 @@ Every allocation shall have:
 	\item a test for boundary conditions.
 \end{itemize}
 
-\subsubsection{Allocation Arithmetic}
+\subsection{Allocation Arithmetic}
 
 Allocation-size arithmetic shall be checked before allocation.
 
@@ -58,7 +58,7 @@ if (items == NULL) {
 }
 \end{lstlisting}
 
-\subsubsection{Ownership}
+\subsection{Ownership}
 
 Functions shall document whether pointer parameters are:
 

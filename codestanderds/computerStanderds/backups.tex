@@ -1,0 +1,142 @@
+\subsection{Purpose}
+
+Backup and recovery procedures ensure that organizational data, systems, configurations, and recovery information can be restored after accidental deletion, hardware failure, software error, cyberattack, operational error, or other disruptive event.
+
+The purpose of these procedures is to:
+
+\begin{itemize}
+    \item Protect the availability and integrity of organizational data
+    \item Establish consistent backup, retention, monitoring, and recovery requirements
+    \item Reduce the risk of permanent data loss
+    \item Protect backups from unauthorized access, modification, deletion, and ransomware
+    \item Define recovery priorities, Recovery Point Objectives (RPOs), and Recovery Time Objectives (RTOs)
+    \item Ensure that backups can be successfully restored when required
+    \item Support business continuity, incident response, and disaster recovery activities
+\end{itemize}
+
+System owners are responsible for defining the backup and recovery requirements for systems under their control. Administrators are responsible for implementing, monitoring, testing, and documenting backups according to those requirements.
+
+\subsection{Backup Scope}
+
+Backups \must{} include all data and system components required to resume normal operations. This includes:
+\begin{itemize}
+    \item User data
+    \item Databases and application data
+    \item Virtual machines, containers, and configuration files
+    \item Operating system and application configuration
+    \item Firewall, router, switch, and hypervisor configurations
+    \item Identity-server and directory-service data
+    \item Backup system configuration
+    \item Encryption keys and recovery information
+    \item Documentation and recovery procedures
+\end{itemize}
+
+Data \should{} be protected using the 3-2-1-1-0 principle:
+\begin{itemize}
+    \item At least 3 copies of the data
+    \item On at least 2 different types of storage
+    \item At least 1 copy stored off-site
+    \item At least 1 copy offline or immutable
+    \item 0 unverified recovery copies
+\end{itemize}
+
+A backup of encrypted data is not sufficient unless the user can also recover the keys required to decrypt it. Encryption keys \must{} be protected separately from the backup data and their recovery procedure \must{} be tested.
+
+\donot{} treat RAID, disk mirroring, snapshots, or high availability as a substitute for backups. These technologies may improve availability or protect against certain hardware failures, but they do not reliably protect against accidental deletion, corruption, ransomware, software errors, unauthorized changes, or site-level disasters.
+
+\subsection{Backup Security}
+
+Backup data \must{} be encrypted both in transit and at rest. Encryption keys \must{} not be stored only on the system being backed up.
+
+Backup systems \must{} use separate administrative accounts from production systems. Backup administrators \should{} have only the permissions required to perform their duties, and restore and deletion permissions \should{} be assigned separately where practical.
+
+Backup credentials \must{} not be reused as domain administrator, server administrator, or ordinary user credentials. Administrative access to backup systems \should{} require MFA and \should{} be logged.
+
+Backup repositories \should{} be isolated from production networks and protected from direct access by ordinary user accounts.
+
+\subsection{Offline and Immutable Copies}
+
+At least one backup copy of critical data \should{} be offline, air-gapped, or protected by an enforced immutability policy.
+
+An immutable backup \must{} not be capable of being modified, overwritten, or deleted during its retention period, including by ordinary backup administrators. Retention locks and similar controls \should{} be protected by separate administrative credentials.
+
+Cloud synchronization \mustnot{} be treated as a backup by itself. Synchronization may copy accidental deletions, corrupted files, or ransomware-encrypted files to every synchronized location.
+
+Offline media \must{} be disconnected from production systems when not being updated. Removable backup media \should{} be stored in a secure, environmentally suitable location and should be encrypted.
+
+\subsection{Backup Scheduling and Retention}
+
+Backups \should{} run automatically according to the importance of the system.
+
+Manual backups may be used as an additional precaution but \mustnot{} be the only backup method for critical data.
+
+Each system \must{} have documented recovery requirements. These requirements \must{} include:
+\begin{itemize}
+    \item Recovery Point Objective (RPO): the maximum acceptable amount of data that may be lost after an interruption
+    \item Recovery Time Objective (RTO): the maximum acceptable amount of time required to restore the system or service
+    \item Backup frequency
+    \item Retention period
+    \item Recovery priority
+\end{itemize}
+
+Retention periods \should{} be long enough to recover from delayed discovery of corruption, accidental deletion, or malware. Backup retention \must{} comply with applicable legal, contractual, and business requirements.
+
+At least one backup copy \should{} use versioning or historical recovery points so that clean data can be recovered from before an incident.
+
+\subsection{Backup Monitoring}
+
+Backup jobs \must{} generate alerts for failures, missed schedules, expired credentials, insufficient storage, integrity errors, and unexpected changes to retention or deletion settings.
+
+Backup status \should{} be reviewed regularly. A successful backup job does not by itself prove that the backup can be restored.
+
+The user \should{} monitor for:
+\begin{itemize}
+    \item Unexpected deletion of backup sets
+    \item Sudden increases in changed or encrypted files
+    \item Disabled backup agents or schedules
+    \item Changes to retention policies
+    \item Unusual administrator logins
+    \item Failed or unauthorized restore attempts
+\end{itemize}
+
+\subsection{Restore Testing}
+
+Restore tests \must{} be documented and performed at defined intervals.
+
+Testing \should{} include both individual-file restoration and complete system or application restoration.
+
+Critical systems \should{} be tested at least quarterly and after major changes to the backup system, infrastructure, or recovery procedure.
+
+Important files and backup repositories \should{} be sampled more frequently.
+
+A restore test \must{} verify:
+\begin{itemize}
+    \item The backup is available
+    \item The backup is not corrupted
+    \item The required encryption keys are available
+    \item The restored data is complete and usable
+    \item Applications and databases operate correctly
+    \item Required identity, DNS, networking, and authentication services are available
+    \item The actual recovery time meets the defined RTO
+\end{itemize}
+
+Each test \should{} record the date, systems tested, backup version used, result, recovery time, errors found, and corrective actions.
+
+Failed restore tests \must{} be treated as operational incidents and corrected promptly.
+
+\subsection{Recovery Procedures}
+
+A documented recovery runbook \must{} identify the order in which systems are restored. The recovery order should normally include:
+
+\begin{enumerate}
+    \item Network connectivity and firewall services
+    \item Identity, authentication, and DNS services
+    \item Storage and virtualization infrastructure
+    \item Databases and core applications
+    \item File services and user data
+    \item Non critical systems
+\end{enumerate}
+
+Recovery documentation \must{} be available when production systems, network access, or documentation systems are unavailable. An offline printed copy or separately protected electronic copy \must{} be maintained.
+
+Recovery procedures \should{} identify authorized personnel, required credentials and keys, backup locations, restoration commands, validation steps, and escalation contacts.

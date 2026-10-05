@@ -1,0 +1,142 @@
+\subsection{Purpose}
+
+Secure configuration procedures establish and maintain approved security settings for systems, applications, network devices, cloud resources, and other technology assets. Secure configurations reduce the likelihood of unauthorized access, data loss, malware infection, service disruption, and exploitation of known weaknesses.
+
+\subsection{Configuration Standards}
+
+Each supported system type \must{} have a documented secure configuration standard appropriate to its purpose, risk, technology, and data classification.
+
+Secure configuration standards \should{} address, where applicable:
+\begin{itemize}
+    \item Operating system and firmware versions
+    \item Supported software versions
+    \item Authentication and authorization settings
+    \item Password and multifactor authentication requirements
+    \item User, administrator, service, and guest accounts
+    \item Network services, ports, and protocols
+    \item Firewall and access-control rules
+    \item Encryption settings
+    \item Logging and monitoring settings
+    \item Malware and endpoint protection
+    \item Automatic updates and patching
+    \item Backup and recovery settings
+    \item Time synchronization
+    \item Physical security settings
+    \item Remote access settings
+    \item Data storage, retention, and disposal settings
+\end{itemize}
+
+Configuration standards \must{} identify settings that are required, prohibited, or permitted only with documented approval.
+
+\subsection{Baseline Configurations}
+
+Systems \must{} be configured using an approved baseline before being placed into production or connected to organizational networks.
+
+A baseline configuration \must{} include, as appropriate:
+\begin{itemize}
+    \item The approved operating system, application, or firmware version
+    \item Required security updates
+    \item Approved services and network ports
+    \item Required security controls
+    \item Approved administrator and service accounts
+    \item Logging and monitoring requirements
+    \item Backup requirements
+    \item Configuration ownership
+    \item Date of approval and most recent review
+\end{itemize}
+
+Unnecessary services, applications, accounts, protocols, ports, and network interfaces \must{} be disabled or removed.
+
+Default passwords, default administrator accounts, sample applications, and vendor-provided demonstration content \must{} be removed, disabled, or changed before production use.
+
+\subsection{Configuration Management}
+
+Configuration changes \must{} be authorized, tested where reasonably practicable, documented, and reviewed according to the change-management procedures.
+
+Configuration changes \must{} identify:
+\begin{itemize}
+    \item The affected system or device
+    \item The requested change
+    \item The reason for the change
+    \item The person requesting and approving the change
+    \item The implementation date
+    \item The expected effect on security and availability
+    \item Any testing or validation performed
+    \item The rollback or recovery procedure
+\end{itemize}
+
+Emergency changes may be implemented before normal approval when necessary to protect systems, data, or users. Emergency changes \must{} be documented and reviewed as soon as reasonably practicable.
+
+Configuration files, scripts, templates, and infrastructure-as-code definitions \should{} be stored in an approved location with access controls and version history.
+
+Configuration files \mustnot{} contain passwords, private keys, API keys, recovery codes, or other secrets in plaintext unless specifically authorized and protected by appropriate controls.
+
+\subsection{Security Hardening}
+
+Administrators \must{} apply security-hardening measures appropriate to the system and its risk.
+
+Systems \must{}, where supported:
+\begin{itemize}
+    \item Require authenticated administrative access
+    \item Restrict administrative access to authorized personnel
+    \item Use encrypted management protocols
+    \item Disable insecure or obsolete protocols
+    \item Restrict remote management to approved networks or access methods
+    \item Enable logging for authentication and administrative activity
+    \item Synchronize system time with an approved time source
+    \item Apply supported security updates
+    \item Use endpoint protection where appropriate
+    \item Protect sensitive data using approved encryption
+\end{itemize}
+
+Administrative interfaces \should{} not be exposed directly to the public Internet unless there is a documented business requirement and compensating controls.
+
+Shared administrative accounts \should{} not be used. When a shared account is technically necessary, its use \must{} be approved, monitored, and reviewed.
+
+\subsection{Configuration Review}
+
+Configurations \must{} be reviewed periodically and after significant changes to the system, software, network, threat environment, or business requirements.
+
+Configuration reviews \should{} verify:
+\begin{itemize}
+    \item Compliance with the approved baseline
+    \item Removal or disabling of unnecessary services and accounts
+    \item Correct application of access controls
+    \item Current patch and firmware status
+    \item Correct logging and monitoring
+    \item Correct backup and recovery settings
+    \item Use of approved encryption
+    \item Removal of unauthorized software or configuration changes
+\end{itemize}
+
+Critical systems \should{} be reviewed at least annually. Internet-facing systems, security devices, and systems containing sensitive information \should{} be reviewed more frequently based on risk.
+
+Automated configuration assessment tools \should{} be used where reasonably practicable.
+
+\subsection{Configuration Exceptions}
+
+A system that cannot meet an approved configuration requirement \must{} have a documented exception.
+
+The exception record \must{} identify:
+\begin{itemize}
+    \item The affected system
+    \item The configuration requirement that cannot be met
+    \item The reason for the exception
+    \item The risks created by the exception
+    \item Compensating controls
+    \item The responsible system owner
+    \item The approving authority
+    \item The expiration or review date
+\end{itemize}
+
+Exceptions \must{} be reviewed before expiration and closed when the affected system is brought into compliance, replaced, isolated, or retired.
+
+\subsection{Responsibility}
+
+System owners are responsible for ensuring that systems under their control have approved and current secure configurations.
+
+Administrators are responsible for implementing, maintaining, documenting, and reviewing configurations.
+
+Users \mustnot{} modify security settings, install unauthorized software, disable security controls, or otherwise alter managed systems without authorization.
+
+Configuration deviations, suspected tampering, and unauthorized software \must{} be reported promptly to the appropriate administrator or security contact.

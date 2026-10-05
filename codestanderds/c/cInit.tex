@@ -1,4 +1,4 @@
-\subsubsection{General Requirement}
+\subsection{General Requirement}
 
 Every object shall be initialized before it is read.
 
@@ -11,7 +11,7 @@ bool packet_is_valid = false;
 
 Uninitialized local variables are prohibited.
 
-\subsubsection{Default Initialization}
+\subsection{Default Initialization}
 
 Objects shall be initialized to a valid and documented default state.
 
@@ -25,7 +25,7 @@ struct device device = {
 
 Designated initializers shall be used for structures when they improve clarity or protect against changes in member ordering.
 
-\subsubsection{Structures}
+\subsection{Structures}
 
 Structure members shall be initialized explicitly when their zero value is not the required default.
 
@@ -39,7 +39,7 @@ struct configuration configuration = {
 };
 \end{lstlisting}
 
-\subsubsection{Arrays}
+\subsection{Arrays}
 
 Arrays shall be initialized explicitly when partial initialization could hide an error.
 
@@ -47,7 +47,7 @@ Arrays shall be initialized explicitly when partial initialization could hide an
 uint8_t header[HEADER_LENGTH] = {0U};
 \end{lstlisting}
 
-\subsubsection{Pointers}
+\subsection{Pointers}
 
 Pointers shall be initialized to a valid object or to \texttt{NULL}.
 
@@ -57,11 +57,11 @@ uint8_t *buffer = NULL;
 
 A pointer shall not be dereferenced unless its validity has been established.
 
-\subsubsection{Static Storage}
+\subsection{Static Storage}
 
 Static and file-scope objects shall have an explicit initializer when the initial state is important to the module contract.
 
-\subsubsection{Initialization Functions}
+\subsection{Initialization Functions}
 
 Initialization functions shall:
 
@@ -77,7 +77,7 @@ Initialization functions shall:
 int device_init(device_t *device);
 \end{lstlisting}
 
-\subsubsection{Partial Initialization}
+\subsection{Partial Initialization}
 
 An object shall not be exposed to other modules until initialization is complete.
 

@@ -1,0 +1,90 @@
+The organization \must{} maintain an accurate inventory of software used on organizational systems or to access organizational data.
+
+The organization \should{} maintain an approved software list identifying software that is authorized for general use, restricted use, or use only on specifically approved systems.
+
+Software \should{} be assigned a status such as approved, approved with restrictions, pending review, prohibited, unsupported, or retired.
+
+The software inventory \must{} include, where applicable:
+\begin{itemize}
+    \item Operating systems and system components
+    \item Applications and productivity software
+    \item Security, backup, monitoring, and management tools
+    \item Databases, runtimes, libraries, frameworks, and dependencies
+    \item Firmware and embedded software
+    \item Scripts, automation tools, and internally developed software
+    \item Software-as-a-service applications and cloud services
+    \item Mobile applications used to access organizational systems or data
+    \item Container images and packages
+    \item Browser extensions and add-ons
+\end{itemize}
+
+Each software record \must{}, to the extent applicable, include:
+\begin{itemize}
+    \item Software name and purpose
+    \item Publisher, developer, or service provider
+    \item Version and edition
+    \item Installation location or associated system
+    \item Software owner and technical administrator
+    \item License type, license quantity, and renewal date
+    \item Data classification and types of data handled
+    \item Business criticality
+    \item Dependencies and integrations
+    \item Support status and end-of-support date
+    \item Approved source or distribution method
+    \item Date of last review
+\end{itemize}
+
+Software \must{} be approved before it is installed, deployed, or used to process organizational data. Approval \must{} consider the software's purpose, security features, licensing requirements, privacy and data-handling practices, compatibility, support status, and operational risk.
+
+Users \mustnot{} install or use unauthorized software on organizational systems. Users \mustnot{} use software obtained from untrusted or unofficial sources unless it has been reviewed and approved by an authorized administrator.
+
+Software installation \must{} be limited to authorized personnel or approved management systems. Administrative privileges \should{} not be granted to users solely to permit software installation.
+
+The organization \must{} maintain a process for identifying unsupported, obsolete, vulnerable, or end-of-life software. Unsupported software \must{} be upgraded, replaced, isolated, or removed. If immediate remediation is not possible, the system owner \must{} document and approve an exception that identifies the risk, compensating controls, responsible owner, and expiration or review date.
+
+Software \must{} be kept reasonably current through approved patches, updates, and upgrades. Security updates \must{} be prioritized according to the severity of the vulnerability, exposure of the affected system, availability of mitigations, and business criticality.
+
+Software updates \should{} be tested before broad deployment when testing is practical and the risk of incompatibility is significant. Emergency security updates may be deployed without standard testing when delaying deployment would create a greater risk.
+
+The organization \should{} use centralized software deployment, endpoint management, package management, or equivalent technical controls to:
+\begin{itemize}
+    \item Identify installed software
+    \item Detect unauthorized software
+    \item Track software versions
+    \item Deploy approved updates
+    \item Remove unsupported or unauthorized software
+    \item Report systems that do not meet software requirements
+\end{itemize}
+
+Open-source software, libraries, packages, and external dependencies \must{} be obtained from approved sources and maintained at supported versions where feasible. Internally developed software \must{} identify its significant external dependencies and \should{} be reviewed for known vulnerabilities before release.
+
+Software used to handle confidential, regulated, or otherwise sensitive information \must{} be evaluated for appropriate access controls, encryption, logging, retention, and data-sharing behavior.
+
+Software licenses \must{} be managed in accordance with applicable licensing terms. The organization \must{} maintain sufficient records to demonstrate that software use is authorized and that license limits are not exceeded.
+
+Software-as-a-service applications \must{} have an identified business owner and technical or administrative contact. Before use, the organization \should{} evaluate the service's authentication, access control, data protection, backup, logging, incident notification, termination, and data-return capabilities.
+
+Software inventory records \must{} be reviewed:
+\begin{itemize}
+    \item At least annually
+    \item Before and after major software deployments
+    \item When software is replaced, upgraded, or retired
+    \item When a vendor ends support for a product
+    \item After a significant vulnerability or security incident
+    \item When licensing, contractual, or regulatory requirements change
+\end{itemize}
+
+Software that is no longer approved, supported, required, or licensed \must{} be removed or formally excepted. Associated accounts, integrations, credentials, scheduled tasks, service connections, and stored data \must{} be reviewed and disabled or removed as appropriate.
+
+Retired software records \should{} include:
+\begin{itemize}
+    \item Software name and version
+    \item Systems or users affected
+    \item Retirement date
+    \item Reason for retirement
+    \item Replacement software, if applicable
+    \item Data migration or disposal actions
+    \item Removal or decommissioning approval
+\end{itemize}
+
+Changes to critical software installations, configurations, integrations, and versions \should{} be documented. Significant changes \must{} follow the organization's change-management procedures.

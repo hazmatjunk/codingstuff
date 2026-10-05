@@ -1,0 +1,228 @@
+\subsection{Purpose}
+
+The purpose of this section is to establish minimum requirements for preparing for, identifying, reporting, assessing, containing, investigating, recovering from, and learning from security and technology incidents.
+
+These requirements are intended to:
+\begin{itemize}
+    \item Reduce the impact and duration of security and operational incidents
+    \item Ensure that suspected incidents are reported and handled consistently
+    \item Establish clear responsibilities and communication requirements
+    \item Protect systems, data, users, and organizational operations
+    \item Preserve relevant evidence for investigation and follow-up
+    \item Support timely recovery and restoration of affected services
+    \item Identify corrective actions that reduce the likelihood of recurrence
+\end{itemize}
+
+\subsection{Incident Definition}
+
+An incident is an actual or suspected event that may negatively affect the confidentiality, integrity, or availability of systems, services, accounts, networks, or data.
+
+Incidents may include:
+\begin{itemize}
+    \item Unauthorized access or attempted unauthorized access
+    \item Malware, ransomware, or suspected system compromise
+    \item Phishing, credential theft, or account takeover
+    \item Loss or unauthorized disclosure of sensitive information
+    \item Lost or stolen devices
+    \item Accidental deletion, alteration, or destruction of data
+    \item Denial-of-service or significant service interruption
+    \item Unauthorized changes to systems, applications, or network controls
+    \item Backup failure affecting recovery capability
+    \item Physical damage or environmental conditions affecting critical systems
+    \item Violations of security procedures or approved configurations
+\end{itemize}
+
+Personnel \must{} report suspected incidents even when the facts are incomplete or the impact is not yet known.
+
+\subsection{Incident Response Responsibilities}
+
+Management \must{} designate a person or team responsible for coordinating incident response. The incident-response function \should{} include, where appropriate:
+\begin{itemize}
+    \item Incident coordinator
+    \item System and network administrators
+    \item System and data owners
+    \item Management representatives
+    \item Legal, compliance, or privacy representatives
+    \item Communications or public-relations representatives
+    \item Human resources representatives
+    \item Relevant vendors, insurers, or external specialists
+\end{itemize}
+
+Incident-response responsibilities \must{} be assigned before an incident occurs. Contact information \must{} be maintained and reviewed periodically.
+
+Personnel involved in incident response \should{} receive appropriate training and participate in exercises or testing.
+
+\subsection{Incident Reporting}
+
+Users and administrators \must{} report suspected incidents promptly to management, the designated security contact, or another approved reporting channel.
+
+Incident reports \should{} include:
+\begin{itemize}
+    \item Date and time of discovery
+    \item Person reporting the event
+    \item Affected user, device, account, system, service, or data
+    \item Description of the observed activity
+    \item Actions already taken
+    \item Available logs, messages, screenshots, or other evidence
+    \item Known or suspected impact
+\end{itemize}
+
+Personnel \must{} not delay reporting while attempting to determine the complete cause or scope of an event.
+
+Incident reports and response communications \must{} be handled according to their sensitivity. Information about an active incident \must{} be shared only with personnel who have a business or response-related need to know.
+
+\subsection{Incident Classification}
+
+Incidents \must{} be classified according to their severity, scope, affected resources, data involved, operational impact, and potential legal or contractual consequences.
+
+Classification \should{} consider:
+\begin{itemize}
+    \item Number and importance of affected systems
+    \item Type and sensitivity of affected information
+    \item Whether unauthorized access is confirmed or suspected
+    \item Availability and operational impact
+    \item Duration and current status of the event
+    \item Likelihood of continued or repeated activity
+    \item Potential regulatory, contractual, legal, or safety impact
+\end{itemize}
+
+The incident coordinator \must{} assign or confirm the severity level and \must{} escalate the incident when new information indicates greater impact or risk.
+
+\subsection{Incident Response Process}
+
+Incident response \must{} follow a documented process that includes:
+\begin{enumerate}
+    \item Preparation
+    \item Identification and reporting
+    \item Initial assessment and classification
+    \item Containment
+    \item Evidence preservation and investigation
+    \item Eradication
+    \item Recovery and service restoration
+    \item Post-incident review and corrective action
+\end{enumerate}
+
+The order and extent of response activities may vary according to the incident. Actions \must{} be coordinated to avoid increasing the damage, destroying evidence, or disrupting critical operations unnecessarily.
+
+\subsection{Containment}
+
+The incident-response team \must{} take reasonable steps to contain an incident and prevent additional harm.
+
+Containment actions may include:
+\begin{itemize}
+    \item Isolating affected devices or network segments
+    \item Disabling compromised accounts
+    \item Revoking sessions, tokens, keys, or credentials
+    \item Blocking malicious addresses, domains, files, or processes
+    \item Removing unauthorized access
+    \item Suspending affected services
+    \item Restricting access to affected systems or data
+    \item Activating alternate systems or recovery procedures
+\end{itemize}
+
+Containment actions \must{} consider business continuity, safety, evidence preservation, and the possibility that the attacker or malware remains active.
+
+Compromised credentials \must{} be changed or revoked. Replacement credentials \must{} be generated and distributed securely.
+
+\subsection{Evidence Preservation and Investigation}
+
+Relevant evidence \must{} be preserved when an incident may require investigation, legal action, regulatory reporting, insurance notification, or other formal review.
+
+Evidence may include:
+\begin{itemize}
+    \item System, application, network, authentication, and security logs
+    \item Disk, memory, or system images where appropriate
+    \item Malware samples or suspicious files
+    \item Email messages, headers, links, and attachments
+    \item Screenshots and error messages
+    \item Access records and account activity
+    \item Configuration files and change records
+    \item Relevant physical security or access records
+\end{itemize}
+
+Evidence \must{} be protected from alteration or unauthorized access. Investigators \should{} document when evidence was collected, by whom, from which source, and how it was stored or transferred.
+
+Administrators \mustnot{} alter or delete relevant logs, files, accounts, or systems without considering evidence-preservation requirements and coordinating with the incident coordinator.
+
+\subsection{Eradication and Recovery}
+
+After containment and investigation, the response team \must{} remove the cause of the incident and address known weaknesses before returning affected systems to normal operation.
+
+Eradication and recovery activities may include:
+\begin{itemize}
+    \item Removing malware or unauthorized software
+    \item Rebuilding or restoring compromised systems
+    \item Applying security patches and configuration changes
+    \item Resetting affected passwords and authentication factors
+    \item Removing unauthorized accounts, rules, services, or access paths
+    \item Restoring data from verified backups
+    \item Testing restored systems before returning them to production
+    \item Increasing monitoring for signs of continued compromise
+\end{itemize}
+
+Systems \must{} be validated before being returned to normal use. Validation \should{} confirm that the system is secure, functional, appropriately monitored, and connected only to authorized services.
+
+Recovery activities \must{} be coordinated with system owners and business stakeholders. Critical services \should{} be restored according to documented recovery priorities.
+
+\subsection{Communication and Notification}
+
+Incident communications \must{} be coordinated by authorized personnel. Personnel \mustnot{} make public statements, contact affected external parties, or notify authorities unless authorized to do so.
+
+Management \must{} determine whether an incident requires notification to:
+\begin{itemize}
+    \item Affected individuals
+    \item Customers or business partners
+    \item Vendors or service providers
+    \item Insurers
+    \item Regulators or government authorities
+    \item Law enforcement
+\end{itemize}
+
+Required notifications \must{} be made within applicable time limits and using approved communication methods. Incident communications \should{} be accurate, limited to confirmed information, and updated when significant facts change.
+
+\subsection{Post-Incident Review}
+
+A post-incident review \must{} be performed for significant incidents and \should{} be performed for recurring or high-risk events.
+
+The review \should{} identify:
+\begin{itemize}
+    \item What happened and when
+    \item Systems, accounts, data, and services affected
+    \item How the incident was detected
+    \item Actions that were successful or unsuccessful
+    \item Root or contributing causes
+    \item Control failures or process weaknesses
+    \item Required corrective actions
+    \item Responsible owners and target completion dates
+    \item Changes needed to policies, procedures, training, or technology
+\end{itemize}
+
+Corrective actions \must{} be tracked until completed or formally accepted as a risk. Lessons learned \should{} be incorporated into security controls, incident procedures, training, and recovery plans.
+
+\subsection{Incident Records}
+
+An incident record \must{} be maintained for each reported incident. The record \should{} include:
+\begin{itemize}
+    \item Incident identifier
+    \item Date and time reported
+    \item Reporter and incident coordinator
+    \item Classification and severity
+    \item Affected systems, accounts, services, and data
+    \item Timeline of significant events and response actions
+    \item Evidence collected and its storage location
+    \item Notifications and communications
+    \item Recovery actions
+    \item Post-incident findings
+    \item Corrective actions and completion status
+    \item Date the incident was closed
+\end{itemize}
+
+Incident records \must{} be protected from unauthorized access and retained according to applicable legal, contractual, business, and records-management requirements.
+
+\subsection{Testing and Maintenance}
+
+The incident-response process \must{} be reviewed periodically and after significant incidents, organizational changes, or changes to critical systems.
+
+Incident-response procedures \should{} be tested through exercises, walkthroughs, simulations, or technical testing. Testing \should{} include relevant personnel, systems, communication methods, escalation paths, backups, and recovery procedures.
+
+Identified weaknesses \must{} be documented and assigned for correction. Contact lists, response procedures, system inventories, recovery information, and escalation instructions \must{} be kept current.

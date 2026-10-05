@@ -9,12 +9,46 @@
 \tableofcontents
 \newpage
 
+
+% Gen Part
+\pagebreak
+\part{General Project Rules}
+
 % Shared project rules
 \section{Introduction}
-\input{sections/introduction.tex}
+%\input{sections/introduction.tex}
+This document defines the general standards, rules, and working practices used by the author. Its purpose is to establish a consistent approach to software development, computing environments, documentation, testing, review, and maintenance.
+
+The standards in this document are intended to improve the quality, readability, maintainability, portability, security, and reliability of
+projects. They apply to source code, configuration files, development tools, computer systems, technical documentation, and project processes.
+
+The document is divided into several areas. The general project rules define principles that apply to the entire project. The document standards define requirements for written and technical documentation. The computer standards define requirements for development and execution environments. Language specific sections define rules for programming languages such as C and Python. Additional sections describe tooling, verification, code review, testing, and the process for requesting exceptions to these standards.
+
+These standards should be used during planning, implementation, review, testing, release, and maintenance. They are intended to support developers rather than replace engineering judgment. Where a specific project requirement conflicts with a general recommendation, the applicable priority rules in this document shall be used.
 
 \section{Scope}
-\input{sections/scope.tex}
+%\input{sections/scope.tex}
+These standards apply to all projects activities, including:
+\begin{itemize}
+    \item source code and scripts;
+    \item build systems and build configurations;
+    \item test code, test data, and verification procedures;
+    \item configuration files and deployment files;
+    \item development, build, test, and execution environments;
+    \item technical, user, operational, and project documentation;
+    \item continuous integration and other automated tooling;
+    \item code reviews and change reviews;
+    \item release packages and maintenance activities.
+\end{itemize}
+
+The standards apply to all contributors, including permanent developers, temporary contributors, reviewers, maintainers, and other individuals who create or modify project deliverables.
+
+Unless a section explicitly states otherwise, a requirement applies to both new work and modifications to existing work. Existing code or documentation does not need to be changed solely to satisfy a newly introduced standard unless it is being substantially modified, reviewed for compliance, or identified as a risk.
+
+This document does not replace external legal, regulatory, contractual, safety, security, or organizational requirements. Where such requirements
+apply, they shall be identified and incorporated into the relevant project plans and deliverables.
+
+The scope of a particular rule may be limited by the rule itself. For example, a rule may apply only to C source code, Python source code, user-facing documentation, or systems used to build and test the project.
 
 \section{Terminology}
 \input{sections/terminology.tex}
@@ -24,6 +58,16 @@
 
 \section{Requirements and Rule Priority}
 \input{sections/requirments.tex}
+
+% document Part
+\pagebreak
+\part{Document Standards}
+\input{docStandereds/docStandered.tex}
+
+% comp Part
+\pagebreak
+\part{Computer Standards}
+\input{computerStanderds/compStandered.tex}
 
 % Language-specific standards
 \pagebreak
@@ -52,6 +96,9 @@
 % Checklists
 \appendix
 
+\section{Example Documents:}
+\input{appendixA/appendixA.tex}
+
 \section{C Review Checklist}
 \input{checklists/cReviewChecklists.tex}
 
@@ -67,9 +114,6 @@
 
 \addcontentsline{toc}{chapter}{References}
 
-\printbibliography[
-    heading=bibintoc,
-    title={References}
-]
+\printbibliography[heading=bibintoc, title={References}]
 
 \end{document}

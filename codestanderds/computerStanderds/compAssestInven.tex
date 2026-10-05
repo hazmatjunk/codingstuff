@@ -1,0 +1,77 @@
+The organization \must{} maintain an accurate inventory of technology assets that are owned, leased, managed, operated, or used to access organizational systems or data.
+
+Each asset \must{} have a unique identifier that allows it to be distinguished from other assets throughout its lifecycle. Physical assets \should{} be labeled with an organizational asset tag where practical.
+
+The asset inventory \must{} include, where applicable:
+\begin{itemize}
+    \item Servers, workstations, laptops, tablets, and mobile devices
+    \item Virtual machines, containers, hypervisors, and cloud resources
+    \item Firewalls, routers, switches, wireless access points, and VPN equipment
+    \item Storage systems, backup systems, and removable media
+    \item Printers, scanners, cameras, and other network connected devices
+    \item Internet facing systems and externally hosted services
+    \item Devices used by employees, contractors, vendors, and other authorized users
+    \item Equipment used to store, process, transmit, or access organizational data
+\end{itemize}
+
+Each inventoried asset \must{}, to the extent technically and operationally feasible, have the following information recorded:
+\begin{itemize}
+    \item Asset name or hostname
+    \item Asset type and description
+    \item Hardware manufacturer, model, and serial number
+    \item Assigned user, department, or responsible role
+    \item Business or system owner
+    \item Physical location or hosting environment
+    \item Internet Protocol address, media access control address, or other identifier
+    \item Operating system or firmware, where applicable
+    \item Data classification and types of data handled
+    \item Criticality and recovery priority
+    \item Related system, service, or business process
+    \item Support status and warranty information
+    \item Acquisition date and expected replacement date
+    \item Current status, such as active, inactive, lost, under repair, or retired
+    \item Date of last inventory review
+\end{itemize}
+
+Asset owners \must{} ensure that asset information remains accurate and current. New assets \must{} be recorded before being placed into production or connected to organizational networks, unless an emergency deployment is authorized and the asset is documented as soon as practicable.
+
+Assets \must{} be assigned to a responsible owner or role. The owner \must{} be accountable for the asset's approved use, security requirements, maintenance, and retirement.
+
+Assets \must{} be classified according to their importance and the sensitivity of the data they store, process, or transmit. Critical assets \must{} be identified so that they can receive appropriate protection, monitoring, backup, and recovery planning.
+
+Unauthorized, unknown, or unmanaged assets \must{} be investigated. An asset that cannot be approved or associated with a responsible owner \must{} be isolated, removed, or otherwise restricted until its status is resolved.
+
+The organization \should{} use automated discovery, endpoint management, cloud management, network monitoring, or similar technical controls to identify assets that are missing from the inventory.
+
+The asset inventory \must{} be reviewed:
+\begin{itemize}
+    \item At least annually
+    \item After significant changes to systems or infrastructure
+    \item During major hardware or software deployments
+    \item After mergers, acquisitions, office moves, or organizational changes
+    \item Following the loss, theft, or disposal of equipment
+    \item Following a security incident that may affect asset ownership or status
+\end{itemize}
+
+Critical assets \should{} be reviewed more frequently based on their risk and operational importance.
+
+Asset records \must{} be updated when equipment is reassigned, relocated, modified, replaced, lost, stolen, or retired. Changes to ownership, responsible personnel, network location, operating system, or data classification \must{} be recorded promptly.
+
+Lost or stolen assets \must{} be reported to management or the designated security contact promptly. The organization \must{}, where technically possible, disable accounts, revoke credentials, remove access tokens, enable remote lock or wipe, and assess whether organizational data may have been exposed.
+
+Assets that are no longer required \must{} be securely decommissioned. Before disposal, reuse, return, or transfer, organizational data \must{} be removed using an approved sanitization method appropriate to the media and sensitivity of the information.
+
+Asset disposal or retirement records \should{} include:
+\begin{itemize}
+    \item Asset identifier
+    \item Date of disposal or retirement
+    \item Reason for disposal or retirement
+    \item Sanitization or destruction method
+    \item Person or vendor performing the work
+    \item Transfer, recycling, return, or destruction details
+    \item Approval, where required
+\end{itemize}
+
+Third-party or cloud-hosted assets that store, process, or transmit organizational data \must{} be included in the inventory or linked to an inventory record. The organization \must{} maintain sufficient information to identify the service provider, service owner, data handled, access method, and contract or subscription status.
+
+The asset inventory \should{} be protected from unauthorized modification or disclosure. Access \must{} be limited to personnel with a legitimate business need, and changes to critical inventory records \should{} be logged.

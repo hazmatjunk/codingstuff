@@ -1,4 +1,4 @@
-\subsubsection{Array Bounds}
+\subsection{Array Bounds}
 
 Every array access shall be demonstrably within bounds.
 
@@ -8,7 +8,7 @@ A pointer to an array shall be accompanied by its length unless the length is gu
 int process_bytes(const uint8_t *data, size_t length);
 \end{lstlisting}
 
-\subsubsection{String Handling}
+\subsection{String Handling}
 
 The following functions are prohibited:
 
@@ -22,6 +22,6 @@ The following functions are prohibited:
 
 String operations shall specify destination capacity and shall preserve null termination.
 
-\subsubsection{Binary Data}
+\subsection{Binary Data}
 
 Binary buffers shall use \texttt{uint8\_t} and an explicit length. They shall not be treated as null-terminated strings.

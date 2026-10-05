@@ -1,4 +1,4 @@
-\subsubsection{Fixed-Width Integer Types}
+\subsection{Fixed-Width Integer Types}
 
 Fixed-width integer types shall be used when the width or signedness is important.
 
@@ -12,7 +12,7 @@ uint8_t status;
 
 The types \texttt{int8\_t}, \texttt{uint8\_t}, and similar types shall be used instead of assuming the size of \texttt{char}, \texttt{short}, or \texttt{int}.
 
-\subsubsection{Boolean Values}
+\subsection{Boolean Values}
 
 Boolean values shall use \texttt{bool} from \texttt{<stdbool.h>}.
 
@@ -24,7 +24,7 @@ bool packet_is_valid;
 
 Integer values shall not be used as booleans unless the conversion is explicit and documented.
 
-\subsubsection{Enumerations}
+\subsection{Enumerations}
 
 Enumerations shall be used for finite sets of named states.
 
@@ -36,7 +36,7 @@ typedef enum {
 } mode_t;
 \end{lstlisting}
 
-\subsubsection{Explicit Conversions}
+\subsection{Explicit Conversions}
 
 Conversions that may change signedness, width, precision, or interpretation shall be explicit.
 
@@ -47,7 +47,7 @@ uint16_t reduced_value = (uint16_t)value;
 
 The conversion shall be safe. A cast shall not be used merely to silence a compiler warning.
 
-\subsubsection{Const Correctness}
+\subsection{Const Correctness}
 
 The \texttt{const} qualifier shall be used whenever an object is not modified through a pointer.
 
@@ -55,7 +55,7 @@ The \texttt{const} qualifier shall be used whenever an object is not modified th
 void process_packet(const uint8_t *data, size_t length);
 \end{lstlisting}
 
-\subsubsection{Additional Rules}
+\subsection{Additional Rules}
 
 \begin{itemize}
 	\item Do not compare signed and unsigned values without an explicit conversion or documented reason.

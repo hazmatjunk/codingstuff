@@ -1,4 +1,4 @@
-\subsubsection{Public Declarations}
+\subsection{Public Declarations}
 
 A public declaration is any declaration exposed through a module's interface header.
 
@@ -13,7 +13,7 @@ Public declarations shall be limited to:
 	\item public configuration structures when required by the interface.
 \end{itemize}
 
-\subsubsection{Private Declarations}
+\subsection{Private Declarations}
 
 Private functions, variables, constants, and types shall be defined in the corresponding source file.
 
@@ -26,7 +26,7 @@ static uint32_t calculate_checksum(const uint8_t *data,
 static uint32_t checksum_seed = 0U;
 \end{lstlisting}
 
-\subsubsection{Global Variables}
+\subsection{Global Variables}
 
 Global mutable variables are prohibited.
 
@@ -34,7 +34,7 @@ File-scope variables shall be private unless there is a documented architectural
 
 Public variables shall not be used for ordinary module communication. Functions shall be used instead.
 
-\subsubsection{Opaque Types}
+\subsection{Opaque Types}
 
 Public headers should expose opaque structures rather than structure definitions.
 

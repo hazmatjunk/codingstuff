@@ -1,0 +1,217 @@
+\subsection{Purpose}
+
+Change-management procedures ensure that changes to systems, applications, networks, devices, configurations, data, and technology services are authorized, evaluated, tested, implemented, and documented in a controlled manner.
+
+The purpose of change management is to reduce service interruptions, security weaknesses, data loss, configuration errors, and unintended effects on other systems.
+
+\subsection{Change Requirements}
+
+Changes \must{} be managed when they may affect:
+\begin{itemize}
+    \item System security or access controls
+    \item System availability or performance
+    \item Network connectivity or routing
+    \item Applications, databases, or stored data
+    \item Operating systems, firmware, or installed software
+    \item Backup, logging, monitoring, or recovery capabilities
+    \item Encryption, authentication, or authorization
+    \item Compliance, contractual, or legal requirements
+\end{itemize}
+
+Changes may include installations, upgrades, patches, configuration changes, migrations, integrations, removals, and changes to service providers.
+
+Routine administrative tasks that do not materially affect security, availability, performance, or functionality may follow an approved standard-change procedure.
+
+\subsection{Change Classification}
+
+Changes \should{} be classified according to their risk, urgency, complexity, and expected effect.
+
+Change classifications may include:
+\begin{itemize}
+    \item \textbf{Standard change:} A low-risk, repeatable change with an approved procedure.
+    \item \textbf{Normal change:} A planned change that requires review and approval before implementation.
+    \item \textbf{Emergency change:} An urgent change required to address an active incident, critical vulnerability, service outage, or immediate operational risk.
+\end{itemize}
+
+The person implementing a change \must{} use the appropriate process for the change classification.
+
+A change \must{} not be classified as standard merely to avoid review or approval requirements.
+
+\subsection{Change Requests}
+
+Normal changes \must{} be documented before implementation.
+
+A change request \must{} include:
+\begin{itemize}
+    \item A description of the proposed change
+    \item The reason and business purpose
+    \item The affected systems, services, data, and users
+    \item The expected security, availability, and operational effects
+    \item The risks associated with the change
+    \item The implementation steps
+    \item The testing and validation plan
+    \item The planned implementation date and maintenance window
+    \item The rollback or recovery procedure
+    \item The person responsible for implementation
+    \item The required approvers
+\end{itemize}
+
+Changes \must{} be approved by an authorized person before implementation unless the emergency-change process applies.
+
+\subsection{Change Assessment}
+
+The change requester and system owner \must{} evaluate the potential effects of a proposed change.
+
+The assessment \should{} consider:
+\begin{itemize}
+    \item Confidentiality, integrity, and availability
+    \item Dependencies between systems and services
+    \item Effects on users and business operations
+    \item Security controls and monitoring
+    \item Backup and recovery requirements
+    \item Compatibility with existing hardware and software
+    \item Data-protection and compliance requirements
+    \item Required downtime or service interruption
+    \item Risk of failure and the ability to reverse the change
+\end{itemize}
+
+High-risk changes \should{} receive additional technical review and management approval.
+
+Changes affecting critical systems \should{} be scheduled during an approved maintenance window whenever reasonably practicable.
+
+\subsection{Testing}
+
+Changes \should{} be tested before production implementation.
+
+Testing \should{} be performed in a development, test, staging, or other environment that is separate from production when reasonably practicable.
+
+Testing \should{} verify:
+\begin{itemize}
+    \item The change performs its intended function
+    \item Existing functionality remains available
+    \item Security controls remain effective
+    \item Data is not corrupted or lost
+    \item Monitoring and logging continue to operate
+    \item Backup and recovery procedures remain usable
+    \item Dependent systems continue to function
+\end{itemize}
+
+Test results \must{} be documented for significant or high-risk changes.
+
+Testing may be limited or skipped for an emergency change when delay would create greater risk. The reason \must{} be documented.
+
+\subsection{Implementation}
+
+Changes \must{} be implemented according to the approved change plan.
+
+The person implementing the change \must{} verify that:
+\begin{itemize}
+    \item The correct system and environment are being changed
+    \item A current backup or recovery point is available when appropriate
+    \item Required personnel are available
+    \item Required approvals have been obtained
+    \item The approved implementation steps are followed
+    \item The implementation is documented
+\end{itemize}
+
+Unplanned changes made during implementation \must{} be documented and reviewed.
+
+Changes \must{} not be implemented using unauthorized accounts, unapproved software, or undocumented procedures.
+
+\subsection{Rollback and Recovery}
+
+Each significant change \must{} have a documented rollback or recovery procedure.
+
+The rollback procedure \should{} identify:
+\begin{itemize}
+    \item Conditions that require rollback
+    \item The person authorized to initiate rollback
+    \item The steps required to restore the previous state
+    \item Required backups or recovery points
+    \item Expected service interruption
+    \item Validation steps after rollback
+    \item Communication requirements
+\end{itemize}
+
+If a change fails, causes an unacceptable security or operational issue, or cannot be validated, the change \should{} be rolled back when reasonably practicable.
+
+\subsection{Post-Implementation Review}
+
+Significant changes \must{} be reviewed after implementation.
+
+The post-implementation review \should{} confirm:
+\begin{itemize}
+    \item The change achieved its intended purpose
+    \item Systems and services are operating correctly
+    \item Security controls remain effective
+    \item Monitoring and logging are functioning
+    \item No unauthorized changes were introduced
+    \item Required documentation has been updated
+    \item Any incidents or unexpected effects were addressed
+\end{itemize}
+
+Failed, partially completed, and emergency changes \must{} receive a post-implementation review.
+
+The change record \must{} be updated with the implementation result, validation results, problems encountered, rollback actions, and final status.
+
+\subsection{Emergency Changes}
+
+Emergency changes may be implemented without normal advance approval when necessary to:
+\begin{itemize}
+    \item Contain or respond to a security incident
+    \item Address an actively exploited vulnerability
+    \item Restore a critical service
+    \item Prevent immediate data loss
+    \item Prevent significant harm to systems, users, or operations
+\end{itemize}
+
+Emergency changes \must{} be authorized by the responsible manager, system owner, incident leader, or other designated authority whenever reasonably practicable.
+
+Emergency changes \must{} be documented as soon as possible and reviewed after implementation.
+
+\subsection{Separation of Duties}
+
+Where reasonably practicable, the person requesting a high-risk change \should{} not be the only person approving and implementing that change.
+
+Changes affecting privileged access, security controls, financial systems, sensitive data, or critical services \should{} receive independent review.
+
+No person \should{} approve their own high-risk change without additional review or documented justification.
+
+\subsection{Change Records}
+
+Change records \must{} be retained according to the organization's record-retention requirements.
+
+Change records \should{} include:
+\begin{itemize}
+    \item Change identification number
+    \item Request date
+    \item Requester and responsible implementer
+    \item Affected systems and services
+    \item Change classification
+    \item Risk assessment
+    \item Approval records
+    \item Planned and actual implementation dates
+    \item Testing results
+    \item Rollback or recovery information
+    \item Implementation outcome
+    \item Post-implementation review
+\end{itemize}
+
+System documentation, configuration baselines, network diagrams, operating procedures, and recovery documentation \must{} be updated after significant changes.
+
+\subsection{Unauthorized Changes}
+
+Unauthorized changes \must{} be investigated and documented.
+
+The investigation \should{} determine:
+\begin{itemize}
+    \item What was changed
+    \item When the change occurred
+    \item Who or what performed the change
+    \item Why the change occurred
+    \item Whether security or availability was affected
+    \item Whether rollback or remediation is required
+    \item Whether additional controls are needed
+\end{itemize}
+
+Unauthorized changes that may indicate compromise, misuse, or loss of control \must{} be reported according to the incident-response procedures.

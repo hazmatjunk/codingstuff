@@ -1,10 +1,10 @@
-\subsubsection{Applicability}
+\subsection{Applicability}
 
 Concurrency includes operating-system threads, interrupt handlers, callbacks, signal handlers, asynchronous tasks, and hardware event handlers.
 
 Concurrency shall not be introduced unless it is required by the system design.
 
-\subsubsection{Shared State}
+\subsection{Shared State}
 
 Shared mutable state shall be minimized.
 
@@ -20,7 +20,7 @@ The following are prohibited:
 	\item using \texttt{volatile} as a replacement for synchronization.
 \end{itemize}
 
-\subsubsection{Ownership}
+\subsection{Ownership}
 
 Each shared object shall have one of the following documented policies:
 
@@ -32,7 +32,7 @@ Each shared object shall have one of the following documented policies:
 	\item exchanged through a documented message-passing interface.
 \end{itemize}
 
-\subsubsection{Mutexes}
+\subsection{Mutexes}
 
 Mutex acquisition and release shall be visibly paired.
 
@@ -46,19 +46,19 @@ mutex_unlock(&state_mutex);
 
 A mutex shall not be held while calling an external function unless the locking contract explicitly permits it.
 
-\subsubsection{Lock Ordering}
+\subsection{Lock Ordering}
 
 When multiple locks are required, the project shall define a global lock ordering.
 
 Locks shall always be acquired in that order to prevent deadlock.
 
-\subsubsection{Atomics}
+\subsection{Atomics}
 
 C11 atomic objects shall be used only when their memory-ordering behavior is understood and documented.
 
 The default sequentially consistent ordering shall be preferred unless a different ordering is justified.
 
-\subsubsection{Interrupts and Signal Handlers}
+\subsection{Interrupts and Signal Handlers}
 
 Signal handlers and interrupt handlers shall perform minimal work.
 
@@ -66,13 +66,13 @@ They shall not call functions that are not safe in their execution context.
 
 Communication with the main application shall use an approved mechanism, such as an atomic flag, queue, or event object.
 
-\subsubsection{Thread Cancellation}
+\subsection{Thread Cancellation}
 
 Thread cancellation shall not be used unless cleanup behavior is fully defined.
 
 Resources shall not be leaked when a thread exits or is cancelled.
 
-\subsubsection{Testing}
+\subsection{Testing}
 
 Concurrent code shall be tested under:
 

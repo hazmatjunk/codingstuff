@@ -1,10 +1,10 @@
-\subsubsection{Documentation Requirements}
+\subsection{Documentation Requirements}
 
 Documentation shall explain intent, contracts, assumptions, ownership, and limitations. It shall not merely repeat the implementation.
 
 Documentation shall be updated whenever behavior or interfaces change.
 
-\subsubsection{Public Interfaces}
+\subsection{Public Interfaces}
 
 Every public function shall document:
 
@@ -37,7 +37,7 @@ int buffer_write(buffer_t *buffer,
                  size_t length);
 \end{lstlisting}
 
-\subsubsection{Module Documentation}
+\subsection{Module Documentation}
 
 Each module shall document:
 
@@ -51,7 +51,7 @@ Each module shall document:
 	\item its error-reporting strategy.
 \end{itemize}
 
-\subsubsection{Comments}
+\subsection{Comments}
 
 Comments shall explain why the code exists, not simply describe what the code visibly does.
 
@@ -71,7 +71,7 @@ delay_ms(HARDWARE_RESET_DELAY_MS);
 
 For multi-line comments use space+asterisk for every line
 
-\subsubsection{TODO Comments}
+\subsection{TODO Comments}
 
 TODO comments shall include an issue identifier or owner.
 
@@ -81,6 +81,6 @@ TODO comments shall include an issue identifier or owner.
 
 Unowned TODO comments shall not be committed to production code.
 
-\subsubsection{Generated Documentation}
+\subsection{Generated Documentation}
 
 Public interfaces should use a consistent documentation format, such as Doxygen. Generated documentation shall be treated as a build artifact and shall not replace source-level documentation.

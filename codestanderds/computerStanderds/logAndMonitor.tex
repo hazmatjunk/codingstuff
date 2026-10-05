@@ -1,0 +1,183 @@
+\subsection{Purpose}
+
+The purpose of this section is to establish minimum requirements for collecting, protecting, retaining, reviewing, and responding to logs and monitoring information from systems, applications, network devices, and security controls.
+
+These requirements are intended to:
+\begin{itemize}
+    \item Detect unauthorized access, misuse, security incidents, and control failures
+    \item Support investigation, incident response, troubleshooting, and recovery
+    \item Provide accountability for administrative, privileged, and security-sensitive actions
+    \item Ensure that important systems and services generate appropriate logs
+    \item Protect logs from unauthorized access, alteration, deletion, or premature destruction
+    \item Establish appropriate log retention, review, and disposal practices
+    \item Provide timely notification of significant security and operational events
+    \item Support the assessment and improvement of security, availability, and compliance controls
+\end{itemize}
+
+Systems, applications, network devices, and security controls \must{} generate sufficient logs and monitoring information to support security detection, troubleshooting, incident response, availability management, and compliance requirements.
+
+Logging and monitoring requirements \must{} be based on the importance of the system, the sensitivity of the information, the likelihood of threats, and applicable legal, contractual, or business requirements.
+
+\subsection{Logging Requirements}
+
+Critical systems and security-relevant services \must{} produce logs for significant security, administrative, operational, and access events.
+
+Where supported, systems \should{} log:
+\begin{itemize}
+    \item Successful and unsuccessful authentication attempts
+    \item Account creation, modification, disabling, and deletion
+    \item Changes to privileges, groups, roles, and access permissions
+    \item Administrative and privileged actions
+    \item Access to sensitive or restricted information
+    \item Security-control changes
+    \item Configuration changes
+    \item Software installation, removal, and updates
+    \item System startup, shutdown, and service failures
+    \item Malware, intrusion, and other security alerts
+    \item Data export, deletion, or transfer events
+    \item Backup, restoration, and recovery events
+    \item Network connections and remote-access sessions
+\end{itemize}
+
+Logging \must{} be enabled before systems are placed into production unless a documented exception has been approved.
+
+\subsection{Log Content}
+
+Logs \should{} contain enough information to support investigation and correlation. Where applicable, each event \should{} include:
+\begin{itemize}
+    \item Date and time
+    \item Source system or device
+    \item User, account, process, or service involved
+    \item Source and destination address or resource
+    \item Event type and outcome
+    \item Affected system, application, account, or data
+    \item Relevant transaction, session, or correlation identifier
+    \item Description of the action or error
+\end{itemize}
+
+Systems \must{} use synchronized and reasonably accurate time sources. Time synchronization \should{} be centrally managed where practical.
+
+Logs \mustnot{} contain passwords, private keys, authentication tokens, recovery codes, or other sensitive credential values. Sensitive information that is not required for logging \should{} be masked, removed, or replaced with a non-sensitive identifier.
+
+\subsection{Centralized Log Collection}
+
+Logs from critical systems and security devices \should{} be sent to a centralized logging or security-monitoring system where technically feasible.
+
+Centralized logging \should{} be used to:
+\begin{itemize}
+    \item Reduce the risk of log loss or unauthorized alteration
+    \item Correlate events across systems
+    \item Support detection of suspicious activity
+    \item Provide a consistent search and investigation capability
+    \item Alert responsible personnel about important events
+    \item Support incident response and forensic analysis
+\end{itemize}
+
+Log transmission and storage \must{} be protected against unauthorized access and alteration. Logs transmitted across untrusted networks \should{} use encrypted connections.
+
+Systems \should{} continue producing local logs when centralized collection is unavailable. Collection failures \should{} generate an alert or other notification for responsible personnel.
+
+\subsection{Log Protection and Access}
+
+Access to logs \must{} be limited to authorized personnel with a business or operational need. Administrative access to logging systems \must{} use individual accounts where supported and \should{} require MFA.
+
+Log access:
+\begin{itemize}
+    \item \must{} be restricted according to least privilege
+    \item \must{} be monitored where feasible
+    \item \must{} not allow ordinary users to alter security logs
+    \item \should{} be separated from the administration of the systems being monitored
+    \item \must{} be removed when the user's role or responsibilities no longer require it
+\end{itemize}
+
+Logs \must{} be protected from unauthorized deletion, modification, or premature destruction. Where appropriate, logs \should{} be stored using access controls, integrity protection, write-once storage, or other tamper-resistant mechanisms.
+
+\subsection{Log Retention}
+
+Logs \must{} be retained for a period appropriate to the system's importance, the sensitivity of the information, investigation requirements, and applicable legal, contractual, or business requirements.
+
+The organization \should{} define retention periods for:
+\begin{itemize}
+    \item Authentication and access logs
+    \item Administrative activity logs
+    \item Security alerts
+    \item Network and firewall logs
+    \item Application and database logs
+    \item Backup and restoration logs
+    \item Logs associated with security incidents
+\end{itemize}
+
+Logs associated with an investigation, legal hold, audit, or unresolved incident \must{} be preserved until the responsible owner authorizes their release or disposal.
+
+Log retention and disposal \must{} consider the sensitivity of the information contained in the logs. Logs \must{} be securely deleted or destroyed when the retention period expires, unless they are required for an active investigation or other approved purpose.
+
+\subsection{Monitoring and Alerting}
+
+Security and operational monitoring \must{} be implemented for systems and services based on their criticality and risk.
+
+Monitoring \should{} identify:
+\begin{itemize}
+    \item Repeated authentication failures
+    \item Authentication from unusual locations, devices, or times
+    \item Privilege escalation or unexpected administrative activity
+    \item Creation of unauthorized accounts or access paths
+    \item Changes to security controls or firewall rules
+    \item Malware, intrusion, or suspicious endpoint activity
+    \item Unusual data access, transfer, or deletion
+    \item Unexpected service failures or system shutdowns
+    \item Resource exhaustion or capacity problems
+    \item Backup failures
+    \item Repeated network connection or access-denied events
+\end{itemize}
+
+Alerts \must{} be assigned an appropriate severity and routed to personnel who are responsible for reviewing and responding to them. Alert thresholds \should{} be adjusted to reduce unnecessary alerts while maintaining the ability to detect significant activity.
+
+High-severity alerts \must{} be reviewed promptly. Monitoring personnel \must{} escalate suspected compromise, data loss, or significant control failure according to the incident-response procedure.
+
+\subsection{Review and Investigation}
+
+Logs and alerts \must{} be reviewed at a frequency appropriate to the system's risk and criticality. Critical security alerts \should{} be reviewed as soon as practicable.
+
+Log reviews \should{} determine whether:
+\begin{itemize}
+    \item Suspicious or unauthorized activity occurred
+    \item Administrative actions were expected and approved
+    \item Security controls are operating effectively
+    \item Systems are generating the required logs
+    \item Time synchronization is functioning
+    \item Log collection and storage are operating correctly
+    \item Retention requirements are being met
+\end{itemize}
+
+Investigations \must{} preserve relevant logs and supporting evidence. Investigators \should{} document the event, affected systems, relevant time period, findings, actions taken, and required follow-up.
+
+\subsection{Monitoring Privacy and Data Minimization}
+
+Monitoring \must{} be limited to information necessary for security, operational, legal, or business purposes. Access to monitoring information \must{} be limited to authorized personnel.
+
+Monitoring systems \should{} avoid collecting unnecessary personal information. Where personal information is collected, it \must{} be protected according to the applicable data-classification and retention requirements.
+
+\subsection{Availability of Logging Systems}
+
+Logging and monitoring systems supporting critical operations \should{} have appropriate backup, capacity, and recovery arrangements. Administrators \must{} monitor available storage and take action before logs are lost because of capacity limitations.
+
+A failure of centralized logging \must{} be treated as a control failure and reported to the responsible administrator. The administrator \must{} restore logging as soon as practicable and determine whether any required events were lost during the failure.
+
+\subsection{Review of Logging and Monitoring Controls}
+
+Logging and monitoring configurations \must{} be reviewed periodically and after significant changes to systems, applications, networks, threats, or business requirements.
+
+The review \should{} verify that:
+\begin{itemize}
+    \item Required systems and devices are generating logs
+    \item Important events are being collected
+    \item Logs contain sufficient information for investigation
+    \item Time synchronization is functioning
+    \item Alerts are routed to responsible personnel
+    \item Log access is appropriately restricted
+    \item Retention periods remain appropriate
+    \item Storage capacity is sufficient
+    \item Monitoring gaps and unresolved alerts are tracked
+\end{itemize}
+
+Systems that cannot meet required logging or monitoring controls \must{} be documented and approved as an exception. The exception \must{} identify the missing capability, associated risks, compensating controls, responsible owner, approval, and expiration or review date.

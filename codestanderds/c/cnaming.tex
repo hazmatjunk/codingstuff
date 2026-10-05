@@ -1,4 +1,4 @@
-\subsubsection{General Naming Requirements}
+\subsection{General Naming Requirements}
 
 Names shall describe the purpose, behavior, or ownership of the object they identify. Abbreviations shall be avoided unless they are widely understood within the project.
 
@@ -15,7 +15,7 @@ Names shall:
 	\item avoid misleading names.
 \end{itemize}
 
-\subsubsection{Functions}
+\subsection{Functions}
 
 Functions shall use verb-based names that describe their operation.
 
@@ -34,7 +34,7 @@ has_error();
 can_write();
 \end{lstlisting}
 
-\subsubsection{Variables}
+\subsection{Variables}
 
 Variables shall describe their content and, where useful, their unit.
 
@@ -47,7 +47,7 @@ bool connection_is_open;
 
 Names such as \texttt{data}, \texttt{value}, \texttt{temp}, and \texttt{result} should be avoided unless their meaning is clear from the local context.
 
-\subsubsection{Types}
+\subsection{Types}
 
 Project-defined types shall use a consistent project convention.
 
@@ -58,7 +58,7 @@ typedef enum device_state device_state_t;
 
 Structure tags and typedef names shall not unnecessarily duplicate one another.
 
-\subsubsection{Constants and Macros}
+\subsection{Constants and Macros}
 
 Constants should preferably be represented using typed constants, enumerations, or \texttt{static const} objects instead of macros.
 
@@ -72,6 +72,6 @@ Macros shall use uppercase names with a project-specific prefix.
 #define PROJECT_MAX_PACKET_LENGTH 1024U
 \end{lstlisting}
 
-\subsubsection{Private Names}
+\subsection{Private Names}
 
 Private file-scope functions and variables shall use \texttt{static}. A project prefix may be used for private names when required to avoid collisions with external symbols.
